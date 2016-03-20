@@ -59,7 +59,7 @@
 					<h3>Our Story</h1>
 					<div class="timeline">
 			
-						<div class="event left">
+						<div class="event">
 							<div class="event-content">
 								<div class="arrow"></div>
 								<div class="event-title"></div>
@@ -67,7 +67,7 @@
 							</div>
 						</div>
 						
-						<div class="event right">
+						<div class="event">
 							<div class="event-content">
 								<div class="arrow"></div>
 								<div class="event-title"></div>
@@ -75,7 +75,7 @@
 							</div>
 							
 						</div>
-						<div class="event left">
+						<div class="event">
 							<div class="event-content">
 								<div class="arrow"></div>
 								<div class="event-title"></div>
@@ -83,7 +83,7 @@
 							</div>
 						</div>
 						
-						<div class="event right">
+						<div class="event">
 							<div class="event-content">
 								<div class="arrow"></div>
 								<div class="event-title"></div>
@@ -91,7 +91,7 @@
 							</div>
 							
 						</div>
-						<div class="event left">
+						<div class="event">
 							<div class="event-content">
 								<div class="arrow"></div>
 								<div class="event-title"></div>
