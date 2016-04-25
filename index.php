@@ -1,9 +1,22 @@
 <?php
 	$sections = array(
-		"story"   => "Story",
-		"photos"  => "Photos",
-		"wedding" => "Wedding",
-		"rsvp"    => "RSVP",
+		"home" => array(),
+		"story" => array(
+			"nav" => "Story",
+			"title" => "Our Story"
+		),
+		"photos" => array(
+			"nav" => "Photos",
+			"title" => "Photo Gallery"
+		),
+		"wedding" => array(
+			"nav" => "Wedding",
+			"title" => "The Wedding",
+		),
+		"rsvp" => array(
+			"nav" => "RSVP",
+			"title" => "Are you attending?"
+		)
 	);
 ?>
 
@@ -36,103 +49,33 @@
 			<h1 class="logo">Elise <i>&#xe607;</i> Evan</h1>
 			<nav class="nav" id="nav">
 				<?php $i = 0; ?>
-				<?php foreach($sections as $id => $title): ?>
-					<a id="nav-<?php print $id; ?>" href="#<?php print $id; ?>"><?php print $title; ?></a>
-					<?php if($i == 1): ?> <span class="spacer"></span><?php endif; ?>
-					<?php $i++; ?>
+				<?php foreach($sections as $id => $section): ?>
+					<?php if($section["nav"]): ?>
+						<a id="nav-<?php print $id; ?>" href="#<?php print $id; ?>"><?php print $section["nav"]; ?></a>
+						<?php if($i == 1): ?> <span class="spacer"></span><?php endif; ?>
+						<?php $i++; ?>
+					<?php endif; ?>
 				<?php endforeach; ?>
 			</nav>
 		</header>
-		<div id="wrapper">
-			<section class="section" id="section-home">
-				<div class="content">
-					<div class="home-title">
-						<h1>Tying the knot!</h1>  
-						<h2>October 20, 2017</h1>
-						<div id="countdown"></div>
-					</div>
-					<div class="transition"></div>
-				</div>
+		<div class="content" id="content">
+		
+		<?php foreach($sections as $id => $section): ?>
+			<section class="section" id="section-<?php print $id;?>">
+				<?php if($section["title"]): ?> 
+					<h3 class="section-title"><?php print $section["title"]; ?></h3>
+				<?php endif; ?>
+				<article class="section-content">
+					<?php require("content/".$id.".php"); ?>
+				</article>
 			</section>
-			<section class="section" id="section-story">
-				<div class="content">
-					<h3>Our Story</h1>
-					<div class="timeline">
-			
-						<div class="event">
-							<div class="event-content">
-								<div class="arrow"></div>
-								<div class="event-title"></div>
-								<span class="event-date">October 8, 2013</span>
-							</div>
-						</div>
-						
-						<div class="event">
-							<div class="event-content">
-								<div class="arrow"></div>
-								<div class="event-title"></div>
-								<span class="event-date">October 20, 2013</span>
-							</div>
-							
-						</div>
-						<div class="event">
-							<div class="event-content">
-								<div class="arrow"></div>
-								<div class="event-title"></div>
-								<span class="event-date">August 23, 2014</span>
-							</div>
-						</div>
-						
-						<div class="event">
-							<div class="event-content">
-								<div class="arrow"></div>
-								<div class="event-title"></div>
-								<span class="event-date">June 7, 2015</span>
-							</div>
-							
-						</div>
-						<div class="event">
-							<div class="event-content">
-								<div class="arrow"></div>
-								<div class="event-title"></div>
-								<span class="event-date">October 20, 2017</span>
-							</div>
-						</div>
-						
-					</div>
-				</div>
-			</section>
-			<section class="section" id="section-photos">
-				<div class="content">
-					<h3>Photo Gallery</h1>
-					<div class="gallery-wrapper">
-						<div class="gallery">
-							<div class="gallery-sizer"></div>
-							<div class="gallery-nav">
-								<div class="previous"></div>
-								<div class="next"></div>
-							</div>
-							<div class="gallery-content">
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="section" id="section-wedding">
-				<div class="content">
-					<h3>The Wedding</h1>
-				</div>
-			</section>
-			<section class="section" id="section-rsvp">
-				<div class="content">
-					<h3>Are you attending?</h1>
-				</div>
-			</section>
+		<?php endforeach; ?>
+
 		</div>
 		<footer>
 			<div class="content">
 				<h2>Thanks for Visiting our Website</h2>
-				<div class="footer_txt">				
+				<div class="footer-text">				
 					<h3>Mr. &amp; Future Mrs. Laurie</h3>
 					<div class="copyrights">Copyright &copy; 2016 <a href="mailto:evan@thelauries.com">Evan</a> &amp; <a href="mailto:elise@thelauries.com">Elise Laurie</a></div>
 					<div>Developed by <a target="_blank" href="http://evanlaurie.com">Evan Laurie</a></div>
