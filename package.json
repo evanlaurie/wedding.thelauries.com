@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:dev": "NODE_ENV='development' $(npm bin)/webpack --config webpack.config.dev.js",
-    "build:watch": "NODE_ENV='development' $(npm bin)/webpack --config webpack.config.dev.js --progress --colors --watch",
+    "build:dev": "NODE_ENV='dev' $(npm bin)/babel-node $(npm bin)/webpack",
+    "build:prod": "NODE_ENV='prod' $(npm bin)/babel-node $(npm bin)/webpack",
+    "build:watch": "NODE_ENV='dev' $(npm bin)/babel-node $(npm bin)/webpack --progress --colors --watch",
     "lint": "$(npm bin)/eslint . --ext .js,.jsx --quiet --fix",
     "test": "$(npm bin)/babel-node $(npm bin)/_mocha `find ./app -name \"test\" -type d` || true"
   },
@@ -22,6 +23,7 @@
   "dependencies": {
     "jquery": "^2.2.4",
     "jquery-countdown": "^2.0.5",
+    "jquery-sticky": "^1.0.4",
     "jquery.easing": "^1.3.2",
     "waypoints": "^4.0.0",
     "webfontloader": "^1.6.24"
@@ -42,15 +44,18 @@
     "eslint-plugin-jsx-a11y": "^1.2.2",
     "eslint-plugin-react": "^5.1.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
     "imports-loader": "^0.6.5",
     "jsdom": "^9.2.1",
     "mocha": "^2.5.3",
     "node-babel": "^0.1.2",
     "node-sass": "^3.7.0",
+    "postcss-loader": "^0.9.1",
     "sass-loader": "^3.2.0",
     "sasslint-loader": "0.0.1",
     "source-map": "^0.5.6",
     "webpack": "^1.13.1",
+    "webpack-config": "^5.0.1",
     "webpack-notifier": "^1.3.0"
   }
 }
