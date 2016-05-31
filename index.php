@@ -27,20 +27,17 @@
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
 		<title>Evan & Elise Wedding</title>
 		
+		<link href="dist/styles.css" rel="stylesheet" type='text/css'>
+		<script type="text/javascript" src="dist/bundle.js"></script>
+		<!--
 		<link href="lib/icomoon/style.css" rel="stylesheet" type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Pinyon+Script|Open+Sans+Condensed:300|Open+Sans|Julius+Sans+One' rel='stylesheet' type='text/css'>
-		
-		<link href="lib/arctext/css/style.css" rel="stylesheet" type='text/css'>
-		<link href="css/style.css" rel="stylesheet" type='text/css'>
-		
 		<script type="text/javascript" src="lib/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="lib/jquery.sticky-1.0.0.js"></script>
 		<script type="text/javascript" src="lib/jquery.easing.1.3.js"></script>
 		<script type="text/javascript" src="lib/jquery.waypoints.js"></script>
 		<script type="text/javascript" src="lib/jquery.countdown-2.0.5/jquery.countdown.js"></script>
+		--->
 		
-		<script type="text/javascript" src="lib/arctext/js/jquery.arctext.js"></script>
-		<script type="text/javascript" src="js/site.js"></script>
 		
 	</haed>
 	<body>
