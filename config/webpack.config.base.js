@@ -1,12 +1,15 @@
 import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import autoprefixer from 'autoprefixer';
+import GitRevisionPlugin from 'git-revision-webpack-plugin';
 import {
   Config,
   ConfigEnvironment
 } from 'webpack-config';
 
 const baseDir = ConfigEnvironment.INSTANCE.valueOf('dir');
+const env = ConfigEnvironment.INSTANCE.valueOf('env');
+const gitRevisionPlugin = new GitRevisionPlugin();
 
 export default new Config().merge({
   entry: {
@@ -27,6 +30,11 @@ export default new Config().merge({
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery'
+    }),
+    new webpack.DefinePlugin({
+      'ENV': JSON.stringify(env),
+      'VERSION': JSON.stringify(gitRevisionPlugin.version()),
+      'COMMITHASH': JSON.stringify(gitRevisionPlugin.commithash()),
     })
   ],
   postcss: [

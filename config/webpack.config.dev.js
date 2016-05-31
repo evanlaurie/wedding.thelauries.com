@@ -13,11 +13,6 @@ export default new Config().extend('./config/webpack.config.base.js').merge({
     pathinfo: true
   },
   plugins: [
-    new WebpackNotifierPlugin({alwaysNotify: true}),
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('development')
-      }
-    })
+    new WebpackNotifierPlugin({alwaysNotify: true})
   ]
 });
