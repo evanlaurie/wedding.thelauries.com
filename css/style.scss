@@ -327,21 +327,25 @@ footer {
   background-repeat: no-repeat;
   border-radius: 3px;
   overflow: hidden;
+  user-select: none;
   
  .gallery-item {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+  }
+  
+  &.animate{
+    .gallery-item{
+      transition: left 1s cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    }
+  }
+  
+  h3 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-left: 100%;
-    transition: margin 1s;
-  }
-  
-  .gallery-item.active{
-    margin-left: 0%;
-  }
-  
-  h3 {
     color: $color_vivid_tangerine;
     font-size: 100px;
     margin: 0;

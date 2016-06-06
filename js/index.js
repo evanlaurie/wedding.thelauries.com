@@ -57,4 +57,12 @@ $(document).ready(function () {
     panels: $('.gallery-item'),
   });
 
+  $('.gallery-nav .next').on('click', () => {
+    carousel.next();
+  });
+
+  $('.gallery-nav .previous').on('click', () => {
+    carousel.previous();
+  });
+
 });
