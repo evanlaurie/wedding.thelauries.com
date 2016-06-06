@@ -86,7 +86,7 @@ export default new Config().merge({
     alias: {
       'jquery.waypoints': 'waypoints/lib/jquery.waypoints.js',
       'jquery.sticky': 'jquery-sticky',
-      'jquery.countdown': 'jquery-countdown/src/countdown.js'
+      'jquery.countdown': 'jquery-countdown/src/countdown.js',
     },
     extensions: ['', '.js', '.scss']
   },

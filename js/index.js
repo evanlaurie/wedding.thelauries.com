@@ -4,6 +4,7 @@ import 'jquery.easing';
 import 'jquery.sticky';
 import 'jquery.countdown';
 import WebFont from 'webfontloader';
+import Carousel from './carousel';
 
 WebFont.load({
   google: {
@@ -51,4 +52,9 @@ $(document).ready(function () {
       '<span class="countdown-time"> %-D DAYS</span>'
     ));
   });
+
+  var carousel = new Carousel({
+    panels: $('.gallery-item'),
+  });
+
 });

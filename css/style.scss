@@ -316,6 +316,37 @@ footer {
 .gallery-sizer {
   margin-top: 75%;
 }
+.gallery-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 3px;
+  overflow: hidden;
+  
+ .gallery-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 100%;
+    transition: margin 1s;
+  }
+  
+  .gallery-item.active{
+    margin-left: 0%;
+  }
+  
+  h3 {
+    color: $color_vivid_tangerine;
+    font-size: 100px;
+    margin: 0;
+  }
+}
 .gallery-nav {
   position: absolute;
   top: 50%;
