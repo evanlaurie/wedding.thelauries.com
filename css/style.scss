@@ -504,3 +504,9 @@ footer {
     }
   }
 }
+
+@media (hover:none), (hover:on-demand) {
+	#nav a:hover {
+    border-bottom-color: initial;
+  }
+}
