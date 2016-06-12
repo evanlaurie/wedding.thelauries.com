@@ -4,7 +4,7 @@ $alabaster: #fafafa;
 $color_tundora: #454545;
 $color_tenn: #d35400;
 $color_coral: #fd7b4d;
-$color_wild_sand: #f5f5f5;
+$color_wild_sand: #fcfaf5;
 $color_vivid_tangerine: #fea07f;
 $color_silver_chalice: #afafaf;
 $color_rustic_red: #4a0000;
@@ -18,7 +18,8 @@ $font_4: cursive;
 $font_5: icomoon;
 
 //urls
-$url_0: url(http://jonathanivyphoto.com/wp-content/uploads/2014/12/Hermann-Park-Engagement-photographer-01.jpg);
+$url_0: url(http://www.gannett-cdn.com/media/2015/09/04/USATODAY/ExperienceAmerica/635769624436045974-washington-olympia.jpg);
+$url_0: url(../resoures/olympia.jpg);
 
 html {
   text-size-adjust: 100%;
@@ -138,13 +139,17 @@ footer {
   background-size: cover;
   h1 {
     text-align: center;
-    font-size: 44px;
+    font-size: 80px;
     margin: 0;
     font-family: $font_3, $font_4;
   }
   h2 {
+    font-size: 30px;
     text-align: center;
     font-family: $font_2, $font_1;
+  }
+  #countdown{
+    font-size: 24px;
   }
   .section-content {
     position: relative;
@@ -160,6 +165,7 @@ footer {
     width: 100%;
     z-index: 10;
     transform: translate(-50%,-50%);
+    padding: 10px;
   }
   .transition {
     position: absolute;
@@ -176,7 +182,7 @@ footer {
     padding: 10px;
   }
   .section-title {
-    font-size: 32px;
+    font-size: 40px;
     font-family: $font_3, $font_4;
     text-align: center;
     margin: 0;
@@ -242,8 +248,9 @@ footer {
     border-radius: 4px;
     background: $alabaster;
     margin: 10px 0;
-    min-height: 100px;
     flex: 1;
+    font-size: 12px;
+    padding: 6px;
     box-shadow: 0 0 10px 0 rgba($color_tundora,.4);
     > .arrow {
       position: absolute;
@@ -265,15 +272,39 @@ footer {
       }
     }
   }
+  
+  .event-title {
+    font-size: 14px;
+    color: $color_tenn;
+    padding-bottom: 4px;
+    position: relative;
+  }
+  
+  .event-title:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: $color_coral;
+    background: linear-gradient(to left, rgba($white,0) 0,$color_coral 10%,$color_coral 90%,rgba($white,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=0 );
+    opacity: .5;
+    left: 0;
+  }
+  
+  .event-body {
+    margin: 10px 0;
+  }
+  
   .event-date {
     position: absolute;
     top: 50%;
-    width: 124px;
+    width: 130px;
     display: inline-block;
     border: 2px solid $color_vivid_tangerine;
     border-radius: 4px;
     background: $alabaster;
-    font-size: 12px;
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
@@ -415,45 +446,17 @@ footer {
 }
 @media(max-width: 520px) {
   .timeline::before {
-    left: 62px;
+    left: 65px;
   }
   .timeline {
     .event-date {
       background: rgba($white,.8);
     }
     .event {
-      &:nth-child(odd) {
-        width: calc(100% - 120px);
-        margin-left: 120px;
-        margin-right: inherit;
-        .event-content {
-          margin-left: 20px;
-          margin-right: inherit;
-          > .arrow {
-            left: -15px;
-            right: initial;
-            border-right-color: $color_vivid_tangerine;
-            border-left-width: 0;
-            border-right-width: 15px;
-            &:after {
-              left: 3px;
-              right: initial;
-              border-left-width: 0;
-              border-right-width: 14px;
-              border-right-color: $alabaster;
-            }
-          }
-        }
-        .event-date {
-          left: initial;
-          right: 100%;
-          margin-right: 20px;
-          margin-left: inherit;
-        }
-      }
+      &:nth-child(odd),
       &:nth-child(even) {
-        width: calc(100% - 120px);
-        margin-left: 120px;
+        width: calc(100% - 130px);
+        margin-left: 130px;
         margin-right: inherit;
         .event-content {
           margin-left: 20px;
@@ -461,9 +464,9 @@ footer {
           > .arrow {
             left: -15px;
             right: initial;
+            border-right-color: $color_vivid_tangerine;
             border-left-width: 0;
             border-right-width: 15px;
-            border-right-color: $color_vivid_tangerine;
             &:after {
               left: 3px;
               right: initial;
@@ -476,7 +479,7 @@ footer {
         .event-date {
           left: initial;
           right: 100%;
-          margin-right: 20px;
+          margin-right: 22px;
           margin-left: inherit;
         }
       }

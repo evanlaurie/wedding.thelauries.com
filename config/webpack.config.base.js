@@ -73,8 +73,7 @@ export default new Config().merge({
         loader: ExtractTextPlugin.extract('style', ['css','postcss','sass'].join('!')) 
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2)/,
-        include: [ `${baseDir}/css` ],
+        test: /\.(eot|svg|ttf|woff|woff2|jpg)/,
         loader: 'file',
         query: {
           name: 'fonts/[name].[ext]'
