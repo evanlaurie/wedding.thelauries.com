@@ -8,7 +8,8 @@
     "build:prod": "NODE_ENV='prod' $(npm bin)/babel-node $(npm bin)/webpack",
     "build:watch": "NODE_ENV='dev' $(npm bin)/babel-node $(npm bin)/webpack --progress --colors --watch",
     "lint": "$(npm bin)/eslint . --ext .js,.jsx --quiet --fix",
-    "test": "$(npm bin)/babel-node $(npm bin)/_mocha `find ./app -name \"test\" -type d` || true"
+    "test": "$(npm bin)/babel-node $(npm bin)/_mocha `find ./app -name \"test\" -type d` || true",
+    "deploy": './scripts/deploy.sh'
   },
   "repository": {
     "type": "git",
