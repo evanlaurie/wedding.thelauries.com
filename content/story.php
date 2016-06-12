@@ -3,7 +3,7 @@ $events = array(
   array(
     'date' => 'October 8, 2013',
     'title' => 'How We Met',
-    'content' => 'Elise and Evan met on a popular online dating site. On this day, Elise sent Evan a message that read, “You. Are. Hilarious.”  Evan is still hilarious and Elise still thinks he is.'
+    'content' => 'Evan and Elise met on a popular online dating site. On this day, Elise sent Evan a message that read, “You. Are. Hilarious.”  Evan is still hilarious and Elise still thinks he is.'
   ),
   array(
     'date' => 'October 20, 2013',
