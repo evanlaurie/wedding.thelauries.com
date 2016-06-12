@@ -1,13 +1,27 @@
 //colors
 $white: #fff;
-$alabaster: #fafafa;
-$color_tundora: #454545;
-$color_tenn: #d35400;
-$color_coral: #fd7b4d;
-$color_wild_sand: #fcfaf5;
-$color_vivid_tangerine: #fea07f;
-$color_silver_chalice: #afafaf;
-$color_rustic_red: #4a0000;
+
+$primary_backround: #fcfaf5;
+
+$footer_background: #454545;
+$footer_separator: #afafaf;
+
+$shadow_color: #454545;
+$text_color: #454545;
+
+$logo_color: #6D6875;
+
+$header_background: #fafafa;
+$event_background: #fafafa;
+$section_background: #fafafa;
+$gallery_background: #fafafa;
+
+$nav_color: #B5838D;
+$event_title_color: #6D6875;
+
+$border_color: #B5838D;
+
+$gradient_line_color: #B5838D;
 
 //fonts
 $font_0: Open Sans;
@@ -19,7 +33,7 @@ $font_5: icomoon;
 
 //urls
 $url_0: url(http://www.gannett-cdn.com/media/2015/09/04/USATODAY/ExperienceAmerica/635769624436045974-washington-olympia.jpg);
-$url_0: url(../resoures/olympia.jpg);
+$home_backround: url(../resoures/olympia.jpg);
 
 html {
   text-size-adjust: 100%;
@@ -29,21 +43,21 @@ html {
 }
 body {
   font-family: $font_0, $font_1;
-  background: $color_wild_sand;
+  background: $primary_backround;
   margin: 0;
-  color: $color_tundora;
+  color: $text_color;
   font-smoothing: antialiased;
 }
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba($alabaster,.9);
+  background: rgba($header_background,.9);
   overflow: hidden;
   z-index: 100;
-  box-shadow: 0 2px 4px rgba($color_tundora,.3);
+  box-shadow: 0 2px 4px rgba($shadow_color,.3);
   .logo {
-    color: $color_rustic_red;
+    color: $logo_color;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -67,9 +81,9 @@ header {
 }
 footer {
   color: $white;
-  background: $color_tundora;
+  background: $footer_background;
   text-align: center;
-  box-shadow: 0 2px 4px rgba($color_tundora,.3);
+  box-shadow: 0 2px 4px rgba($shadow_color,.3);
   .content {
     padding: 40px;
   }
@@ -92,7 +106,7 @@ footer {
     }
   }
   .copyrights {
-    border-top: 1px solid $color_silver_chalice;
+    border-top: 1px solid $footer_separator;
     padding-top: 20px;
   }
 }
@@ -102,7 +116,7 @@ footer {
   height: 100%;
   overflow: hidden;
   z-index: 99;
-  background-color: $color_wild_sand;
+  background-color: $primary_backround;
 }
 #nav {
   margin-top: -38px;
@@ -115,7 +129,7 @@ footer {
     flex: 1;
     padding: 4px 0;
     margin: 0;
-    color: $color_tenn;
+    color: $nav_color;
     font-size: 16px;
     text-align: center;
     text-transform: uppercase;
@@ -124,16 +138,16 @@ footer {
     border-bottom: 4px solid;
     border-color: transparent;
     &:hover {
-      border-bottom-color: rgba($color_tenn,.5);
+      border-bottom-color: rgba($nav_color,.5);
     }
     &.active {
-      border-bottom-color: $color_tenn;
+      border-bottom-color: $nav_color;
     }
   }
 }
 #section-home {
   height: 100vh;
-  background: $url_0;
+  background: $home_backround;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -155,7 +169,7 @@ footer {
     position: relative;
     height: 100%;
     width: 100%;
-    background: rgba($alabaster,.8);
+    background: rgba($section_background,.8);
     text-align: center;
   }
   .home-title {
@@ -173,7 +187,7 @@ footer {
     height: 50%;
     width: 100%;
     margin: 0 -10px;
-    background: linear-gradient(to bottom, rgba($white,0) 0,$color_wild_sand 100%);
+    background: linear-gradient(to bottom, rgba($white,0) 0,$primary_backround 100%);
   }
 }
 .section {
@@ -190,7 +204,6 @@ footer {
 }
 .timeline {
   position: relative;
-  padding-top: 40px;
   .event {
     width: 50%;
     display: flex;
@@ -207,12 +220,12 @@ footer {
           right: -15px;
           margin-top: -14px;
           border-right-width: 0;
-          border-left-color: $color_vivid_tangerine;
+          border-left-color: $border_color;
           &:after {
             right: 3px;
             bottom: -14px;
             border-right-width: 0;
-            border-left-color: $alabaster;
+            border-left-color: $event_background;
           }
         }
       }
@@ -229,13 +242,13 @@ footer {
           top: 50%;
           left: -15px;
           margin-top: -15px;
-          border-right-color: $color_vivid_tangerine;
+          border-right-color: $border_color;
           border-left-width: 0;
           &:after {
             bottom: -14px;
             left: 3px;
             border-left-width: 0;
-            border-right-color: $alabaster;
+            border-right-color: $event_background;
           }
         }
       }
@@ -244,14 +257,14 @@ footer {
   .event-content {
     position: relative;
     width: 100%;
-    border: 2px solid $color_vivid_tangerine;
+    border: 2px solid $border_color;
     border-radius: 4px;
-    background: $alabaster;
+    background: $event_background;
     margin: 10px 0;
     flex: 1;
     font-size: 12px;
     padding: 6px;
-    box-shadow: 0 0 10px 0 rgba($color_tundora,.4);
+    box-shadow: 0 0 10px 0 rgba($shadow_color,.4);
     > .arrow {
       position: absolute;
       width: 0;
@@ -275,8 +288,10 @@ footer {
   
   .event-title {
     font-size: 14px;
-    color: $color_tenn;
-    padding-bottom: 4px;
+    color: $event_title_color;
+    padding-bottom: 8px;
+    padding-left: 4px;
+    font-weight: bold;
     position: relative;
   }
   
@@ -286,9 +301,8 @@ footer {
     bottom: 0;
     width: 100%;
     height: 2px;
-    background: $color_coral;
-    background: linear-gradient(to left, rgba($white,0) 0,$color_coral 10%,$color_coral 90%,rgba($white,0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=0 );
+    background: $gradient_line_color;
+    background: linear-gradient(to left, rgba($white,0) 0,$gradient_line_color 10%,$gradient_line_color 90%,rgba($white,0) 100%);
     opacity: .5;
     left: 0;
   }
@@ -302,15 +316,15 @@ footer {
     top: 50%;
     width: 130px;
     display: inline-block;
-    border: 2px solid $color_vivid_tangerine;
+    border: 2px solid $border_color;
     border-radius: 4px;
-    background: $alabaster;
+    background: $event_background;
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
     padding: 4px;
     transform: translateY(-50%);
-    box-shadow: 0 0 6px 0 rgba($color_tundora,.4);
+    box-shadow: 0 0 6px 0 rgba($shadow_color,.4);
   }
 }
 .timeline::before {
@@ -321,9 +335,8 @@ footer {
   height: 100%;
   content: "";
   margin-left: -1px;
-  background: $color_coral;
-  background: linear-gradient(to bottom, rgba($white,0) 0,$color_coral 10%,$color_coral 90%,rgba($white,0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=0 );
+  background: $gradient_line_color;
+  background: linear-gradient(to bottom, rgba($white,0) 0,$gradient_line_color 10%,$gradient_line_color 90%,rgba($white,0) 100%);
   opacity: .5;
 }
 .gallery {
@@ -332,12 +345,12 @@ footer {
   max-width: 800px;
   max-height: 600px;
   min-height: 100px;
-  border: 2px solid $color_vivid_tangerine;
+  border: 2px solid $border_color;
   border-radius: 4px;
-  background: $alabaster;
+  background: $gallery_background;
   margin: 10px 0;
   flex: 1;
-  box-shadow: 0 0 10px 0 rgba($color_tundora,.4);
+  box-shadow: 0 0 10px 0 rgba($shadow_color,.4);
   position: relative;
   margin: auto;
 }
@@ -377,7 +390,6 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: $color_vivid_tangerine;
     font-size: 100px;
     margin: 0;
   }
@@ -389,7 +401,7 @@ footer {
   transform: translateY(-50%);
   .next {
     position: absolute;
-    background: $color_wild_sand;
+    background: $primary_backround;
     cursor: pointer;
     right: -20px;
     &:after,
@@ -405,12 +417,12 @@ footer {
       border-right: none;
     }
     &:after {
-      border-left-color: $color_wild_sand;
+      border-left-color: $primary_backround;
       border-width: 20px;
       margin-top: -20px;
     }
     &:before {
-      border-left-color: $color_vivid_tangerine;
+      border-left-color: $border_color;
       border-width: 26px;
       margin-top: -26px;
     }
@@ -418,7 +430,7 @@ footer {
   .previous {
     position: absolute;
     left: -20px;
-    background: $color_wild_sand;
+    background: $primary_backround;
     cursor: pointer;
     &:after,
     &:before {
@@ -433,12 +445,12 @@ footer {
       border-left: none;
     }
     &:after {
-      border-right-color: $color_wild_sand;
+      border-right-color: $primary_backround;
       border-width: 20px;
       margin-top: -20px;
     }
     &:before {
-      border-right-color: $color_vivid_tangerine;
+      border-right-color: $border_color;
       border-width: 26px;
       margin-top: -26px;
     }
@@ -464,7 +476,7 @@ footer {
           > .arrow {
             left: -15px;
             right: initial;
-            border-right-color: $color_vivid_tangerine;
+            border-right-color: $border_color;
             border-left-width: 0;
             border-right-width: 15px;
             &:after {
@@ -472,7 +484,7 @@ footer {
               right: initial;
               border-left-width: 0;
               border-right-width: 14px;
-              border-right-color: $alabaster;
+              border-right-color: $event_background;
             }
           }
         }

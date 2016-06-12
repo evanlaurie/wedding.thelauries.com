@@ -28,7 +28,7 @@ $events = array(
   array(
     'date' => 'October 20, 2017',
     'title' => 'The wedding',
-    'content' => 'Exactly four years after their first date, Evan and Elise welcome you to join them in celebration as they become man and wife.'
+    'content' => 'Exactly four years after their first date, Evan and Elise welcome you to join them in celebration as they become husband and wife.'
   ),
 );
 
