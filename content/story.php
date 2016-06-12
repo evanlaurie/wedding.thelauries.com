@@ -8,7 +8,7 @@ $events = array(
   array(
     'date' => 'October 20, 2013',
     'title' => 'Our First Date',
-    'content' => 'Evan and Elise met in person for the first time at Macrina Bakery in downtown Seattle.  After confirming that they were who they said they were, Evan and Elise both ordered Iced Vanilla Lattes and spent the next several hours talking about everything from family to football.'
+    'content' => 'Evan and Elise met in person for the first time at Macrina Bakery in downtown Seattle.  After confirming that they were who they said they were, they both ordered Iced Vanilla Lattes and spent the next several hours talking about everything from family to football.'
   ),
   array(
     'date' => 'August 23, 2014',
