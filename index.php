@@ -28,6 +28,7 @@
 		<title>Evan & Elise Wedding</title>
 		
 		<link href="dist/styles.css" rel="stylesheet" type='text/css'>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 		<script type="text/javascript" src="dist/bundle.js"></script>
 		<!--
 		<link href="lib/icomoon/style.css" rel="stylesheet" type='text/css'>
@@ -43,7 +44,7 @@
 	<body>
 		<div class="background"></div>
 		<header id="header">
-			<h1 class="logo">Elise <i>&#xe607;</i> Evan</h1>
+			<h1 class="logo">Elise <i class="flaticon-interlocking-rings"></i> Evan</h1>
 			<nav class="nav" id="nav">
 				<?php $i = 0; ?>
 				<?php foreach($sections as $id => $section): ?>

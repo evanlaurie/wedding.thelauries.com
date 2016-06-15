@@ -64,7 +64,7 @@ export default new Config().merge({
       },
       { 
         test: /\.js$/, 
-        include: [ `${baseDir}/js` ], 
+        include: [ `${baseDir}/js`, `${baseDir}/lib` ], 
         loader: 'babel-loader' 
       },
       { 

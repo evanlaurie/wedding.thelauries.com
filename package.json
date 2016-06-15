@@ -23,6 +23,7 @@
   "homepage": "https://github.com/evanlaurie/wedding.thelauries.com#readme",
   "dependencies": {
     "carousel-js": "^3.0.0",
+    "google-maps": "^3.2.1",
     "install": "^0.8.1",
     "interact.js": "^1.2.6",
     "jquery": "^2.2.4",
@@ -31,6 +32,7 @@
     "jquery.easing": "^1.3.2",
     "lodash": "^4.13.1",
     "npm": "^3.9.5",
+    "rich-marker": "0.0.1",
     "uninstall": "0.0.0-reserved",
     "waypoints": "^4.0.0",
     "webfontloader": "^1.6.24"

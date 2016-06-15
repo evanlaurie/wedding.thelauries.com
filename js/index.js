@@ -5,6 +5,7 @@ import 'jquery.sticky';
 import 'jquery.countdown';
 import WebFont from 'webfontloader';
 import Carousel from './carousel';
+import RichMarker from '../lib/rich-marker/src/richmarker.js';
 
 WebFont.load({
   google: {
@@ -65,4 +66,110 @@ $(document).ready(function () {
     carousel.previous();
   });
 
+  // GoogleMapsLoader.load(function (google) {
+  const map_color = '#B5838D';
+  const map = new google.maps.Map(document.getElementById('map'), {
+    center: { lat: 47.035524, lng: -122.894 },
+    zoom: 15,
+    styles: [
+      {
+        featureType: 'all',
+        stylers: [
+          { hue: map_color },
+          { saturation: -75 },
+          { lightness: 5 },
+        ],
+      },
+      {
+        featureType: 'administrative',
+        elementType: 'labels.text.fill',
+        stylers: [
+          { saturation: 20 },
+          { lightness: -70 },
+        ],
+      },
+      {
+        featureType: 'water',
+        elementType: 'geometry',
+        stylers: [
+          { saturation: -50 },
+          { lightness: 40 },
+        ],
+      },
+      {
+        featureType: 'road',
+        elementType: 'geometry',
+        stylers: [
+          { hue: map_color },
+          { saturation: -100 },
+          { ightness: 0 },
+        ],
+      },
+      {
+        featureType: 'road.highway',
+        elementType: 'geometry',
+        stylers: [
+          { hue: map_color },
+          { saturation: 5 },
+          { lightness: 5 },
+        ],
+      },
+      {
+        featureType: 'road',
+        elementType: 'geometry.stroke',
+        stylers: [
+          { saturation: 10 },
+          { lightness: 0 },
+        ],
+      }, {
+        featureType: 'road.highway',
+        elementType: 'geometry.stroke',
+        stylers: [
+          { saturation: 0 },
+          { lightness: 20 },
+        ],
+      },
+      {
+        featureType: 'transit',
+        elementType: 'geometry',
+        stylers: [
+          { hue: map_color },
+          { saturation: 30 },
+          { lightness: -30 },
+        ],
+      },
+    ],
+  });
+
+  google.maps.event.addDomListener(window, 'resize', function () {
+    const center = map.getCenter();
+    google.maps.event.trigger(map, 'resize');
+    map.setCenter(center);
+  });
+
+  var bounds = new google.maps.LatLngBounds();
+
+  const markers = [
+    { lat: 47.035527, long: -122.904786, icon: 'flaticon-newly-married-couple' },
+    { lat: 47.042704, long: -122.903550, icon: 'flaticon-champagne-glasses' },
+  ];
+
+  markers.forEach((marker) => {
+    const mark = new RichMarker({
+      position: new google.maps.LatLng(marker.lat, marker.long),
+      map: map,
+      anchor: 8,
+      anchorPoint: new google.maps.Point(0, -40),
+      shadow: 'none',
+      content: '<div class="marker"><i class="' + marker.icon + '"></i></div>',
+    });
+
+    bounds.extend(mark.getPosition());
+
+  });
+
+
+  map.fitBounds(bounds);
+
+  // });
 });
