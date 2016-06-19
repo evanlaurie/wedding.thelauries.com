@@ -39,7 +39,7 @@ $events = array(
     <div class="event">
 	  	<div class="event-content">
 	  		<div class="arrow"></div>
-	  		<div class="event-title"><?=$event['title'] ?></div>
+	  		<div class="event-title facny-title"><?=$event['title'] ?></div>
 	  		<div class="event-body"><?=$event['content'] ?></div>
 	  		<span class="event-date"><?=($event['date']) ?></span>
 	  	</div>

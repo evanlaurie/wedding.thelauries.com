@@ -23,6 +23,9 @@
   "homepage": "https://github.com/evanlaurie/wedding.thelauries.com#readme",
   "dependencies": {
     "carousel-js": "^3.0.0",
+    "element-resize-event": "^2.0.5",
+    "font-awesome": "^4.6.3",
+    "fontawesome": "^4.5.0",
     "google-maps": "^3.2.1",
     "install": "^0.8.1",
     "interact.js": "^1.2.6",
@@ -52,6 +55,7 @@
     "eslint-plugin-import": "^1.8.1",
     "eslint-plugin-jsx-a11y": "^1.2.2",
     "eslint-plugin-react": "^5.1.1",
+    "expose-loader": "^0.7.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "git-revision-webpack-plugin": "^2.2.0",

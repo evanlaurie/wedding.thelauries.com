@@ -58,6 +58,7 @@ export default new Config().merge({
       */
     ], 
     loaders: [
+      { test: /jquery\.js$/, loader: 'expose?$' },
       { 
         test: /jquery\..+\.js$/, 
         loader: 'imports?jQuery=jquery,$=jquery,this=>window' 
@@ -69,8 +70,11 @@ export default new Config().merge({
       },
       { 
         test: /\.scss$/, 
-        include: [ `${baseDir}/css` ], 
         loader: ExtractTextPlugin.extract('style', ['css','postcss','sass'].join('!')) 
+      },
+      { 
+        test: /\.css$/, 
+        loader: ExtractTextPlugin.extract('style', ['css','postcss'].join('!')) 
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|jpg)/,
@@ -87,7 +91,6 @@ export default new Config().merge({
       'jquery.sticky': 'jquery-sticky',
       'jquery.countdown': 'jquery-countdown/src/countdown.js',
     },
-    extensions: ['', '.js', '.scss']
   },
   progress: true
 });
