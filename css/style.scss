@@ -465,13 +465,13 @@ footer {
   position: relative;
   
   #map-canvas{
-    height: 400px;
+    height: 50vh;
     width: 100%;
   }
   
   #map-canvas,
   #map-panel{
-    transition: all 1s;
+    transition: margin 1s, width 1s;
   }
   
   &.panel-open{
@@ -492,15 +492,44 @@ footer {
   left: 0;
   top: 0;
   max-width: 600px;
-  background: #fff;
-  height: 400px;
+  background: $primary_backround;
+  height: 100%;
   overflow: auto;
   box-shadow: 0 0 20px rgba(69,69,69,.3);
   z-index: 1;
   width: 35%;
   margin-left: -40%;
-  display: none;
   padding: 4px;
+  
+  
+  &::-webkit-scrollbar-track{
+    background-color:$primary_backround;
+  }
+  
+  &::-webkit-scrollbar {
+    width:6px;
+  }
+  
+  &::-webkit-scrollbar-thumb{
+    background-color:#9f9f9f;
+  }
+  
+  &::-webkit-scrollbar-thumb:hover{
+    background-color:#888;
+  }
+  
+  h3 {
+    font-size: 22px;
+    margin: 0;
+    margin-bottom: 10px;
+    
+    .summary{
+      font-size: 14px;
+      display: block;
+      color: #777;
+      font-weight: normal;
+    }
+  }
   
   .adp{
     display: none;
@@ -508,8 +537,16 @@ footer {
   
   .placemarker{
     i {
-      font-size: 40px;
-      line-height: 44px;
+      width: 40px;
+      height: 40px;
+      font-size: 26px;
+      line-height: 28px;
+      padding: 4px;
+      background: #fff;
+      border: 2px solid $border_color;
+      border-radius: 40px;
+      display: inline-block;
+      text-align: center;
     }
     .address {
       display: inline-block;
@@ -519,7 +556,8 @@ footer {
       }
       
       .second-line{
-        color: #777;;
+        color: #777;
+        font-size: 12px;
       }
     }
   }
@@ -528,7 +566,26 @@ footer {
     display: flex;
     
     .step-icon{
-      width: 22px;
+      width: 26px;
+      background: #fff;
+      border: 2px solid $border_color;
+      border-radius: 26px;
+      padding: 2px;
+      height: 26px;
+      margin: 4px;
+      text-align: center;
+      display: inline-block;
+      
+      .adp-maneuver{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+      }
+    
+
     }
     .step-number{
       width: 28px;
@@ -597,11 +654,11 @@ footer {
     box-shadow: 0 0 10px 0 rgba($shadow_color,.4);
     
     &:first-of-type {
-      margin-right: 4px;
+      margin-right: 5px;
     }
     
     &:last-of-type{
-      margin-left: 4px;
+      margin-left: 5px;
     }
   }
   
@@ -703,6 +760,10 @@ footer {
       }
     }
   }
+  #map-panel{
+    display: none;
+  }
+  
   .panel-open{
     #map-panel,
     #map-canvas{

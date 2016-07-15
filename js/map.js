@@ -87,6 +87,21 @@ export default class Map {
 
     this.map = new google.maps.Map(map, {
       clickableIcons: false,
+      scrollwheel: false,
+      mapTypeControl: true,
+      mapTypeControlOptions: {
+        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+        position: google.maps.ControlPosition.TOP_RIGHT,
+      },
+      zoomControl: true,
+      zoomControlOptions: {
+        position: google.maps.ControlPosition.TOP_LEFT,
+      },
+      scaleControl: true,
+      streetViewControl: true,
+      streetViewControlOptions: {
+        position: google.maps.ControlPosition.TOP_RIGHT,
+      },
       center: { lat: center[0], lng: center[1] },
       zoom,
       styles,
@@ -195,6 +210,15 @@ export default class Map {
     const end = directions.end_address.split(',');
 
     $panel.append(`
+      <h3 class="facny-title">
+        Directions
+        <span class="summary">
+          ${directions.distance.text} - ${directions.duration.text}
+        </span>
+      </h3>
+    `);
+
+    $panel.append(`
       <div class="placemarker">
         <i class="${from.icon}"></i>
         <span class="address"> 
@@ -203,8 +227,6 @@ export default class Map {
         </span>
       </div>
     `);
-
-    $panel.append(`<div class="summary">${directions.distance.text} About ${directions.duration.text}</div>`);
 
     directions.steps.forEach((step, i) => {
 
