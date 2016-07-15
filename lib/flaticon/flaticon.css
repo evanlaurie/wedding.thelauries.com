@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 15/06/2016 05:05
+  	Creation date: 19/06/2016 00:18
   	*/
 
 @font-face {
@@ -10,7 +10,6 @@
        url("./Flaticon.woff") format("woff"),
        url("./Flaticon.ttf") format("truetype"),
        url("./Flaticon.svg#Flaticon") format("svg");
-  font-weight: normal;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -29,8 +28,6 @@
 }
 
 .flaticon-champagne-glasses:before { content: "\f100"; }
-.flaticon-interlocking-rings:before { content: "\f101"; }
-.flaticon-newly-married-couple:before { content: "\f102"; }
-.flaticon-newlyweds:before { content: "\f103"; }
-.flaticon-newlyweds-1:before { content: "\f104"; }
-.flaticon-wedding:before { content: "\f105"; }
+.flaticon-home:before { content: "\f101"; }
+.flaticon-interlocking-rings:before { content: "\f102"; }
+.flaticon-newly-married-couple:before { content: "\f103"; }

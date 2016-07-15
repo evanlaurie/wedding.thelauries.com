@@ -28,7 +28,7 @@
 		<title>Evan & Elise Wedding</title>
 		
 		<link href="dist/styles.css" rel="stylesheet" type='text/css'>
-		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCvX2skfLHKeRsLP7WubV7vdrMT7SlUkrk"></script>
 		<script type="text/javascript" src="dist/bundle.js"></script>
 		<!--
 		<link href="lib/icomoon/style.css" rel="stylesheet" type='text/css'>
