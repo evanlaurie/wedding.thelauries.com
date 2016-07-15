@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import WebpackNotifierPlugin from 'webpack-notifier';
+import BrowserSyncPlugin from 'browser-sync-webpack-plugin';
 import {
   Config,
   ConfigEnvironment
@@ -13,6 +14,9 @@ export default new Config().extend('./config/webpack.config.base.js').merge({
     pathinfo: true
   },
   plugins: [
-    new WebpackNotifierPlugin({alwaysNotify: true})
+    new WebpackNotifierPlugin({alwaysNotify: true}),
+    new BrowserSyncPlugin({
+      proxy: 'http://localhost:8888/wedding.thelauries.com/'
+    })
   ]
 });
