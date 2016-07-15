@@ -72,7 +72,7 @@ $(document).ready(function () {
   const map = new Map({
     map: document.getElementById('map-canvas'),
     panel: document.getElementById('map-panel'),
-    color: '#B5838D',
+    color: '#454545',
     center: [47.035524, -122.894],
     zoom: 15,
     markers: [wedding, reception],

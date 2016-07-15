@@ -6,7 +6,7 @@ import elementResizeEvent from 'element-resize-event';
 export default class Map {
   constructor(options = {}) {
     const defaults = {
-      color: '#B5838D',
+      color: '#454545',
       center: [0, 0],
       zoom: 1,
     };
