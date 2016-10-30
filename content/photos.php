@@ -6,12 +6,11 @@
 			<div class="next"></div>
 		</div>
 		<div class="gallery-content">
-  		<div class="gallery-item"><h3>1</h3></div>
-      <div class="gallery-item"><h3>2</h3></div>
-      <div class="gallery-item"><h3>3</h3></div>
-      <div class="gallery-item"><h3>4</h3></div>
-      <div class="gallery-item"><h3>5</h3></div>
-      <div class="gallery-item"><h3>6</h3></div> 
+		<?php
+			foreach (glob("resources/engagement/*.jpg") as $filename) {
+				echo '<div class="gallery-item"><img src="' . $filename .'"/></div>';
+			}
+		?>
 		</div>
 	</div>
 </div>

@@ -44,7 +44,7 @@
 	<body>
 		<div class="background"></div>
 		<header id="header">
-			<h1 class="logo">Elise <i class="flaticon-interlocking-rings"></i> Evan</h1>
+			<h1 class="logo"><span>Elise</span> <i class="flaticon-interlocking-rings"></i> <span>Evan</span></h1>
 			<nav class="nav" id="nav">
 				<?php $i = 0; ?>
 				<?php foreach($sections as $id => $section): ?>

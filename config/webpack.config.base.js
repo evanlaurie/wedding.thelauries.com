@@ -2,13 +2,10 @@ import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import autoprefixer from 'autoprefixer';
 import GitRevisionPlugin from 'git-revision-webpack-plugin';
-import {
-  Config,
-  ConfigEnvironment
-} from 'webpack-config';
+import Config, { environment } from 'webpack-config';
 
-const baseDir = ConfigEnvironment.INSTANCE.valueOf('dir');
-const env = ConfigEnvironment.INSTANCE.valueOf('env');
+const baseDir = environment.valueOf('dir');
+const env = environment.valueOf('env');
 const gitRevisionPlugin = new GitRevisionPlugin();
 
 export default new Config().merge({
@@ -17,7 +14,7 @@ export default new Config().merge({
     styles: './css/index.scss'
   },
   output: {
-    path: ConfigEnvironment.INSTANCE.valueOf('dir') + '/dist',
+    path: environment.valueOf('dir') + '/dist',
     filename: '[name].js',
   },
   eslint: {
@@ -77,10 +74,17 @@ export default new Config().merge({
         loader: ExtractTextPlugin.extract('style', ['css','postcss'].join('!')) 
       },
       {
-        test: /\.(eot|svg|ttf|woff|woff2|jpg)/,
+        test: /\.(eot|svg|ttf|woff|woff2)/,
         loader: 'file',
         query: {
           name: 'fonts/[name].[ext]'
+        }
+      },
+      {
+        test: /\.(png|gif|jpg)/,
+        loader: 'file',
+        query: {
+          name: 'images/[name].[ext]'
         }
       }
     ]
@@ -90,6 +94,7 @@ export default new Config().merge({
       'jquery.waypoints': 'waypoints/lib/jquery.waypoints.js',
       'jquery.sticky': 'jquery-sticky',
       'jquery.countdown': 'jquery-countdown/src/countdown.js',
+      'jquery.slick': 'slick-carousel/slick/slick.min.js',
     },
   },
   progress: true
