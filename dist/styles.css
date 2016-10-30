@@ -813,7 +813,7 @@ footer {
       margin: 0 1.2%;
       padding: 0;
       cursor: pointer;
-      top: -4px; }
+      top: -8px; }
       .gallery-content .slick-dots li button {
         width: 10px; }
         .gallery-content .slick-dots li button:before {
@@ -823,6 +823,17 @@ footer {
   .gallery-content h3 {
     font-size: 100px;
     margin: 0; }
+
+.gallery-credit {
+  position: absolute;
+  bottom: 0;
+  font-size: 8px;
+  color: #ccc;
+  padding: 2px; }
+  .gallery-credit a:active,
+  .gallery-credit a:visited,
+  .gallery-credit a:link {
+    color: #bbb; }
 
 .gallery-nav {
   position: absolute;

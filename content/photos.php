@@ -16,5 +16,8 @@
 			}
 		?>
 		</div>
+		<div class="gallery-credit">
+  		<span>Photos by Christine Nguyen | <a target="_BLANK" href="http://olyphotography.com">www.olyphotography.com</a></span>
+		</div>
 	</div>
 </div>
