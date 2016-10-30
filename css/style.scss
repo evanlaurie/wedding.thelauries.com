@@ -384,7 +384,7 @@ footer {
   user-select: none;
   
   &.slick-dotted.slick-slider {
-    margin-bottom: 0;
+    margin-bottom: 28px;
 	}
   
   .slick-list,
@@ -407,7 +407,7 @@ footer {
   }
   
   .slick-dots{
-	  bottom: 0;
+	  bottom: -28px;
 	  border-top: 1px solid #eee;
 	  margin: 0;
     height: auto;

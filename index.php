@@ -22,7 +22,7 @@
 
 <!DOCTYPE html>
 <html>
-	<haed>
+	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<title>Evan & Elise Wedding</title>
@@ -30,17 +30,7 @@
 		<link href="dist/styles.css" rel="stylesheet" type='text/css'>
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCvX2skfLHKeRsLP7WubV7vdrMT7SlUkrk"></script>
 		<script type="text/javascript" src="dist/bundle.js"></script>
-		<!--
-		<link href="lib/icomoon/style.css" rel="stylesheet" type='text/css'>
-		<script type="text/javascript" src="lib/jquery-2.1.1.min.js"></script>
-		<script type="text/javascript" src="lib/jquery.sticky-1.0.0.js"></script>
-		<script type="text/javascript" src="lib/jquery.easing.1.3.js"></script>
-		<script type="text/javascript" src="lib/jquery.waypoints.js"></script>
-		<script type="text/javascript" src="lib/jquery.countdown-2.0.5/jquery.countdown.js"></script>
-		--->
-		
-		
-	</haed>
+	</head>
 	<body>
 		<div class="background"></div>
 		<header id="header">
