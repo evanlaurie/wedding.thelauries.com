@@ -140,7 +140,7 @@ export default class Map {
       anchor: 8,
       anchorPoint: new google.maps.Point(0, -40),
       shadow: 'none',
-      content: '<div class="marker"><i class="' + marker.icon + '"></i></div>',
+      content: `<div class="marker"><i class="${marker.icon}"></i></div>`,
     });
 
     this.markers.push(mark);
@@ -193,7 +193,6 @@ export default class Map {
       if (status == google.maps.DirectionsStatus.OK) {
         this.directionDisplay.setDirections(response);
         this.writeDirectionsSteps(from, to, response.routes[0].legs[0]);
-
       }
     });
   }
@@ -229,15 +228,14 @@ export default class Map {
     `);
 
     directions.steps.forEach((step, i) => {
+      const $step = $('<div/>', { class: 'adp-substep' }).appendTo($panel);
+      const $icon = $('<span/>', { class: 'step-icon adp-stepicon' }).appendTo($step);
+      const $maneuver = $('<div/>', { class: 'adp-maneuver' }).appendTo($icon);
 
-      const $step = $('<div/>', { 'class': 'adp-substep' }).appendTo($panel);
-      const $icon = $('<span/>', { 'class': 'step-icon adp-stepicon' }).appendTo($step);
-      const $maneuver = $('<div/>', { 'class': 'adp-maneuver' }).appendTo($icon);
 
-
-      const $number = $('<span/>', { 'class': 'step-number' }).appendTo($step);
-      const $instructions = $('<span/>', { 'class': 'step-instructions' }).appendTo($step);
-      const $distance = $('<span/>', { 'class': 'step-distance' }).appendTo($step);
+      const $number = $('<span/>', { class: 'step-number' }).appendTo($step);
+      const $instructions = $('<span/>', { class: 'step-instructions' }).appendTo($step);
+      const $distance = $('<span/>', { class: 'step-distance' }).appendTo($step);
 
       if (step.maneuver) $maneuver.addClass(`adp-${step.maneuver.replace(' ', '-')}`);
       else $maneuver.hide();

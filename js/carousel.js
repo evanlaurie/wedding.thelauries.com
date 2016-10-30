@@ -98,15 +98,15 @@ export default class Carousel {
     const { current, panels } = this.options;
 
     panels.slice(0, current + 1).reverse().css({
-      'left': (i) => { return ((i * -100) + offset) + '%'; },
+      left: (i) => { return `${(i * -100) + offset}%`; },
     });
 
     panels.slice(current, panels.length).css({
-      'left': (i) => { return ((i * 100) + offset) + '%'; },
+      left: (i) => { return `${(i * 100) + offset}%`; },
     });
 
     panels.slice(current, current + 1).css({
-      'left': offset + '%',
+      left: `${offset}%`,
     });
   }
 

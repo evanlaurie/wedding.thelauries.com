@@ -3,8 +3,9 @@ import 'jquery.waypoints';
 import 'jquery.easing';
 import 'jquery.sticky';
 import 'jquery.countdown';
+import 'jquery.slick';
+
 import WebFont from 'webfontloader';
-import Carousel from './carousel';
 import Map from './map';
 
 WebFont.load({
@@ -13,9 +14,9 @@ WebFont.load({
   },
 });
 
-$(document).ready(function () {
+$(document).ready(() => {
   $('.section').waypoint({
-    handler: function (direction) {
+    handler(direction) {
       const id = ((direction === 'up') ?
         this.element.previousElementSibling.id :
         this.element.id).split('-')[1];
@@ -43,7 +44,7 @@ $(document).ready(function () {
     event.preventDefault();
   });
 
-  $('#header .logo').on('click', function (event) {
+  $('#header .logo').on('click', (event) => {
     goToSection('home');
     event.preventDefault();
   });
@@ -54,16 +55,17 @@ $(document).ready(function () {
     ));
   });
 
-  var carousel = new Carousel({
-    panels: $('.gallery-item'),
+  $('.gallery-content').slick({
+	  dots: true,
+    arrows: false,
   });
 
-  $('.gallery-nav .next').on('click', () => {
-    carousel.next();
+  $('.gallery-nav .next').click(() => {
+	  $('.gallery-content').slick('slickNext');
   });
 
-  $('.gallery-nav .previous').on('click', () => {
-    carousel.previous();
+  $('.gallery-nav .previous').click(() => {
+	  $('.gallery-content').slick('slickPrev');
   });
 
   const wedding = { lat: 47.035527, long: -122.904786, icon: 'flaticon-newly-married-couple' };
@@ -80,5 +82,4 @@ $(document).ready(function () {
 
   $('#directions-wedding').on('click', () => { map.directions(wedding); });
   $('#directions-reception').on('click', () => { map.directions(reception); });
-
 });
