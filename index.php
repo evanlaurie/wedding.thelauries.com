@@ -24,7 +24,7 @@
 <html>
 	<haed>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1">
+		<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<title>Evan & Elise Wedding</title>
 		
 		<link href="dist/styles.css" rel="stylesheet" type='text/css'>
