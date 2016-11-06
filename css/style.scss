@@ -372,10 +372,10 @@ footer {
   margin: auto;
 }
 .gallery-wrapper {
-  margin: 20px 50px;
+  margin: 0 30px;
 }
 .gallery-sizer {
-  margin-top: 75%;
+  margin-top: 70%;
 }
 .gallery-content{
   position: absolute;
@@ -424,7 +424,7 @@ footer {
     	margin: 0 1.2%;
     	padding: 0;
     	cursor: pointer;
-    	top: -4px;
+    	top: -8px;
     	
     	button{
 	    	width: 10px;
@@ -440,70 +440,57 @@ footer {
   }
   
   h3 {
-    
     font-size: 100px;
     margin: 0;
   }
 }
+
+.gallery-credit{
+  position: absolute;
+  bottom: 0;
+  font-size: 8px;
+  color: #ccc;
+  padding: 2px;
+  
+  a:active,
+  a:visited,
+  a:link{
+    color: #bbb;
+  }
+  
+}
+
 .gallery-nav {
   position: absolute;
-  top: 50%;
-  width: 100%;
-  transform: translateY(-50%);
+  top: 0;
+  bottom: 0;
+  right: -34px;
+  left: -34px;
+  font-size: 50px;
   .next {
     position: absolute;
-    background: $primary_backround;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
     cursor: pointer;
-    right: -20px;
-    &:after,
-    &:before {
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      width: 0;
-      height: 0;
-      content: " ";
-      border: solid transparent;
-      border-color: rgba($white, 0);
-      border-right: none;
-    }
-    &:after {
-      border-left-color: $primary_backround;
-      border-width: 20px;
-      margin-top: -20px;
-    }
-    &:before {
-      border-left-color: $border_color;
-      border-width: 26px;
-      margin-top: -26px;
+    i,
+    i:before{
+      margin: 0;
+      padding: 0;
+      width: 30px;
     }
   }
   .previous {
     position: absolute;
-    left: -20px;
-    background: $primary_backround;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
     cursor: pointer;
-    &:after,
-    &:before {
-      position: absolute;
-      top: 50%;
-      right: 100%;
-      width: 0;
-      height: 0;
-      content: " ";     
-      border: solid transparent;
-      border-color: rgba($white, 0);
-      border-left: none;
-    }
-    &:after {
-      border-right-color: $primary_backround;
-      border-width: 20px;
-      margin-top: -20px;
-    }
-    &:before {
-      border-right-color: $border_color;
-      border-width: 26px;
-      margin-top: -26px;
+    i,
+    i:before{
+      margin: 0;
+      padding: 0;
+      width: 30px;
     }
   }
 }
