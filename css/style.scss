@@ -38,9 +38,10 @@ $home_backround: url(../resources/olympia.jpg);
 @mixin gold-text() {
   color:	#D5AD6D; /*if no support for background-clip*/
 	background: -webkit-linear-gradient(transparent, transparent),
-              -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+              -webkit-linear-gradient(top, rgb(243, 203, 197) 0%, rgb(191, 153, 151) 45%, rgb(131, 90, 86) 83%, rgb(124, 77, 74) 100%);
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  overflow: visible;
 }
 
 html {
@@ -203,6 +204,8 @@ footer {
 }
 .section {
   position: relative;
+  background: url(../resources/rose_gold_dots.png);;
+    
   .section-content {
     padding: 10px;
   }
