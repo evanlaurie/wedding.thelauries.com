@@ -27,20 +27,20 @@ $gradient_line_color: #454545;
 $font_0: Open Sans;
 $font_1: sans-serif;
 $font_2: Julius Sans One;
-$font_3: Pinyon Script;
+$font_3: Italianno;
 $font_4: cursive;
 $font_5: icomoon;
 
 //urls
-$url_0: url(http://www.gannett-cdn.com/media/2015/09/04/USATODAY/ExperienceAmerica/635769624436045974-washington-olympia.jpg);
 $home_backround: url(../resources/olympia.jpg);
 
 @mixin gold-text() {
   color:	#D5AD6D; /*if no support for background-clip*/
 	background: -webkit-linear-gradient(transparent, transparent),
-              -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+              -webkit-linear-gradient(top, rgb(243, 203, 197) 0%, rgb(191, 153, 151) 45%, rgb(131, 90, 86) 83%, rgb(124, 77, 74) 100%);
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  overflow: visible;
 }
 
 html {
@@ -155,6 +155,10 @@ footer {
     }
   }
 }
+#content{
+	background: url(../resources/rose_gold_dots.png);
+}
+
 #section-home {
   height: 100vh;
   background: $home_backround;
@@ -163,7 +167,7 @@ footer {
   background-size: cover;
   h1 {
     text-align: center;
-    font-size: 80px;
+    font-size: 120px;
     margin: 0;
     font-family: $font_3, $font_4;
     @include gold-text();
@@ -203,11 +207,24 @@ footer {
 }
 .section {
   position: relative;
+    
   .section-content {
     padding: 10px;
   }
+  
+  .section-header {
+	  height: 80px;
+	  line-height: 80px;
+	  margin: 0 20%;
+    background: radial-gradient(50% 50%, 
+    	rgba(255, 255, 255, 0.8) 0%, 
+    	rgba(255, 255, 255, 0.7) 50%, 
+    	rgba(255, 255, 255, 0) 100%
+    );
+  }
+  
   .section-title {
-    font-size: 40px;
+    font-size: 50px;
     font-family: $font_3, $font_4;
     text-align: center;
     margin: 0;
@@ -367,6 +384,7 @@ footer {
   box-shadow: 0 0 10px 0 rgba($shadow_color,.4);
   position: relative;
   margin: auto;
+  overflow: hidden;
 }
 .gallery-wrapper {
   margin: 0 30px;
@@ -382,7 +400,7 @@ footer {
   bottom: 0;
   border-radius: 3px;
   user-select: none;
-  
+      
   &.slick-dotted.slick-slider {
     margin-bottom: 28px;
 	}
@@ -412,6 +430,8 @@ footer {
 	  margin: 0;
     height: auto;
     background: #fafafa;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
     
     li{
 	  	position: relative;
@@ -427,6 +447,7 @@ footer {
 	    	width: 10px;
 	    	&:before{
 		    	width: 10px;
+		    	font-size: 9px;
 	    	}
     	}
     }

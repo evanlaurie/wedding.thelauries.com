@@ -10,7 +10,7 @@ import Map from './map';
 
 WebFont.load({
   google: {
-    families: ['Pinyon Script', 'Open Sans Condensed:300', 'Open Sans', 'Julius Sans One'],
+    families: ['Italianno', 'Open Sans Condensed:300', 'Open Sans', 'Julius Sans One'],
   },
 });
 

@@ -50,8 +50,10 @@
 		
 		<?php foreach($sections as $id => $section): ?>
 			<section class="section" id="section-<?php print $id;?>">
-				<?php if($section["title"]): ?> 
+				<?php if($section["title"]): ?>
+				<div class="section-header">
 					<h3 class="section-title"><?php print $section["title"]; ?></h3>
+				</div>
 				<?php endif; ?>
 				<article class="section-content">
 					<?php require("content/".$id.".php"); ?>
