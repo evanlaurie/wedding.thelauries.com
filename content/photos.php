@@ -2,8 +2,12 @@
 	<div class="gallery">
 		<div class="gallery-sizer"></div>
 		<div class="gallery-nav">
-			<div class="previous"></div>
-			<div class="next"></div>
+			<div class="previous">
+  			<i class="icon-left-open-big"></i>
+			</div>
+			<div class="next">
+  			<i class="icon-right-open-big"></i>
+			</div>
 		</div>
 		<div class="gallery-content">
 		<?php
@@ -11,6 +15,9 @@
 				echo '<div class="gallery-item"><img src="' . $filename .'"/></div>';
 			}
 		?>
+		</div>
+		<div class="gallery-credit">
+  		<span>Photos by Christine Nguyen | <a target="_BLANK" href="http://olyphotography.com">www.olyphotography.com</a></span>
 		</div>
 	</div>
 </div>

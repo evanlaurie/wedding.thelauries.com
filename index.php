@@ -26,7 +26,7 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<title>Evan & Elise Wedding</title>
-		
+		<link rel="shortcut icon" href="resources/favico/wedding-couple.ico">
 		<link href="dist/styles.css" rel="stylesheet" type='text/css'>
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCvX2skfLHKeRsLP7WubV7vdrMT7SlUkrk"></script>
 		<script type="text/javascript" src="dist/bundle.js"></script>
@@ -50,8 +50,10 @@
 		
 		<?php foreach($sections as $id => $section): ?>
 			<section class="section" id="section-<?php print $id;?>">
-				<?php if($section["title"]): ?> 
+				<?php if($section["title"]): ?>
+				<div class="section-header">
 					<h3 class="section-title"><?php print $section["title"]; ?></h3>
+				</div>
 				<?php endif; ?>
 				<article class="section-content">
 					<?php require("content/".$id.".php"); ?>
