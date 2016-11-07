@@ -496,9 +496,10 @@ header {
     cursor: pointer;
     color: #D5AD6D;
     /*if no support for background-clip*/
-    background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, #d5ad6d 0%, #d5ad6d 26%, #e2ba78 35%, #a37e43 45%, #91703b 61%, #d5ad6d 100%);
+    background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, #f3cbc5 0%, #bf9997 45%, #835a56 83%, #7c4d4a 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
+    -webkit-text-fill-color: transparent;
+    overflow: visible; }
     header .logo i {
       position: relative;
       top: 2px;
@@ -512,9 +513,10 @@ header {
       line-height: 1;
       color: #D5AD6D;
       /*if no support for background-clip*/
-      background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, #d5ad6d 0%, #d5ad6d 26%, #e2ba78 35%, #a37e43 45%, #91703b 61%, #d5ad6d 100%);
+      background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, #f3cbc5 0%, #bf9997 45%, #835a56 83%, #7c4d4a 100%);
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; }
+      -webkit-text-fill-color: transparent;
+      overflow: visible; }
 
 footer {
   color: #f5f5f5;
@@ -571,6 +573,9 @@ footer {
     #nav a.active {
       border-bottom-color: #454545; }
 
+#content {
+  background: url(images/rose_gold_dots.png); }
+
 #section-home {
   height: 100vh;
   background: url(images/olympia.jpg);
@@ -579,14 +584,15 @@ footer {
   background-size: cover; }
   #section-home h1 {
     text-align: center;
-    font-size: 80px;
+    font-size: 120px;
     margin: 0;
-    font-family: Pinyon Script, cursive;
+    font-family: Italianno, cursive;
     color: #D5AD6D;
     /*if no support for background-clip*/
-    background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, #d5ad6d 0%, #d5ad6d 26%, #e2ba78 35%, #a37e43 45%, #91703b 61%, #d5ad6d 100%);
+    background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, #f3cbc5 0%, #bf9997 45%, #835a56 83%, #7c4d4a 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
+    -webkit-text-fill-color: transparent;
+    overflow: visible; }
   #section-home h2 {
     font-size: 30px;
     text-align: center;
@@ -619,16 +625,22 @@ footer {
   position: relative; }
   .section .section-content {
     padding: 10px; }
+  .section .section-header {
+    height: 80px;
+    line-height: 80px;
+    margin: 0 20%;
+    background: radial-gradient(50% 50%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0) 100%); }
   .section .section-title {
-    font-size: 40px;
-    font-family: Pinyon Script, cursive;
+    font-size: 50px;
+    font-family: Italianno, cursive;
     text-align: center;
     margin: 0;
     color: #D5AD6D;
     /*if no support for background-clip*/
-    background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, #d5ad6d 0%, #d5ad6d 26%, #e2ba78 35%, #a37e43 45%, #91703b 61%, #d5ad6d 100%);
+    background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, #f3cbc5 0%, #bf9997 45%, #835a56 83%, #7c4d4a 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
+    -webkit-text-fill-color: transparent;
+    overflow: visible; }
 
 .facny-title {
   font-size: 14px;
@@ -763,7 +775,8 @@ footer {
       flex: 1;
   box-shadow: 0 0 10px 0 rgba(69, 69, 69, 0.4);
   position: relative;
-  margin: auto; }
+  margin: auto;
+  overflow: hidden; }
 
 .gallery-wrapper {
   margin: 0 30px; }
@@ -804,7 +817,9 @@ footer {
     border-top: 1px solid #eee;
     margin: 0;
     height: auto;
-    background: #fafafa; }
+    background: #fafafa;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px; }
     .gallery-content .slick-dots li {
       position: relative;
       display: inline-block;
@@ -817,7 +832,8 @@ footer {
       .gallery-content .slick-dots li button {
         width: 10px; }
         .gallery-content .slick-dots li button:before {
-          width: 10px; }
+          width: 10px;
+          font-size: 9px; }
   .gallery-content .gallery-item:focus {
     outline: none; }
   .gallery-content h3 {
