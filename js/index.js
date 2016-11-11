@@ -15,11 +15,15 @@ WebFont.load({
 });
 
 $(document).ready(() => {
+  const sections = [];
+
+  $('.section').map(function () { sections.push(this.id); });
+
+  console.log(sections);
+
   $('.section').waypoint({
     handler(direction) {
-      const id = ((direction === 'up') ?
-        this.element.previousElementSibling.id :
-        this.element.id).split('-')[1];
+      const id = ((direction === 'up') ? sections[sections.indexOf(this.element.id) - 1] : this.element.id).split('-')[1];
 
       $('#nav a').removeClass('active');
       $(`#nav-${id}`).addClass('active');

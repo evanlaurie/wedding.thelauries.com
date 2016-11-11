@@ -11,9 +11,6 @@
       </h3>
     <h4>Olympia Capitol Building</h4>
     <p>416 Sid Snyder Ave SW, Olympia 98504</p>
-    <div class="buttons">
-      <button class="directions" id="directions-wedding">Get directions</button>
-    </div>
   </div>
   <div class="info" id="reception-info">
     <h3 class="facny-title">
@@ -23,8 +20,5 @@
     </h3>
     <h4>Waterstreet Café</h4>
     <p>610 Water St SW, Olympia, WA 98501</p>
-    <div class="buttons">
-      <button class="directions" id="directions-reception">Get directions</button>
-    </div>
   </div>
 </div> 
