@@ -27,12 +27,12 @@ $gradient_line_color: #454545;
 $font_0: Open Sans;
 $font_1: sans-serif;
 $font_2: Julius Sans One;
-$font_3: Italianno;
+$font_3: Pinyon Script;
 $font_4: cursive;
 $font_5: icomoon;
 
 //urls
-$home_backround: url(../resources/olympia.jpg);
+$home_backround: url(../resources/olympia_fade.png);
 
 @mixin gold-text() {
   color:	#D5AD6D; /*if no support for background-clip*/
@@ -161,13 +161,25 @@ footer {
 
 #section-home {
   height: 100vh;
-  background: $home_backround;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: linear-gradient(to bottom, rgba(250,250,250,1) 75%,rgba(0,0,0,0) 100%);
+  &:after{
+	  content: "";
+	  background: $home_backround;
+	  background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		opacity: 0.2;
+  	top: 0;
+  	left: 0;
+  	bottom: 0;
+  	right: 0;
+  	position: absolute;
+  	z-index: 1;
+  }
+  
   h1 {
     text-align: center;
-    font-size: 120px;
+    font-size: 80px;
     margin: 0;
     font-family: $font_3, $font_4;
     @include gold-text();
@@ -184,7 +196,7 @@ footer {
     position: relative;
     height: 100%;
     width: 100%;
-    background: rgba($section_background,.8);
+    
     text-align: center;
   }
   .home-title {
@@ -213,18 +225,15 @@ footer {
   }
   
   .section-header {
-	  height: 80px;
-	  line-height: 80px;
-	  margin: 0 20%;
-    background: radial-gradient(50% 50%, 
-    	rgba(255, 255, 255, 0.8) 0%, 
-    	rgba(255, 255, 255, 0.7) 50%, 
-    	rgba(255, 255, 255, 0) 100%
-    );
+	  margin: auto;
+    background: rgba(250,250,250,.7);
+    padding: 10px;
+    border-radius: 8px;
+    width: 240px;
   }
   
   .section-title {
-    font-size: 50px;
+    font-size: 30px;
     font-family: $font_3, $font_4;
     text-align: center;
     margin: 0;
