@@ -1,6 +1,5 @@
 <?php
 	$sections = array(
-		"home" => array(),
 		"story" => array(
 			"nav" => "Story",
 			"title" => "Our Story"
@@ -46,6 +45,11 @@
 				<?php endforeach; ?>
 			</nav>
 		</header>
+		<section class="section" id="section-home">
+			<article class="section-content">
+				<?php require("content/home.php"); ?>
+			</article>
+		</section>
 		<div class="content" id="content">
 		
 		<?php foreach($sections as $id => $section): ?>

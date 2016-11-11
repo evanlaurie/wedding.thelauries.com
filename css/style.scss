@@ -32,7 +32,7 @@ $font_4: cursive;
 $font_5: icomoon;
 
 //urls
-$home_backround: url(../resources/olympia_fade.png);
+$home_backround: url(../resources/olympia.jpg);
 
 @mixin gold-text() {
   color:	#D5AD6D; /*if no support for background-clip*/
@@ -156,13 +156,17 @@ footer {
   }
 }
 #content{
+	position: relative;
+	padding-top: 10%;
+  margin-top: -10%;
+  z-index: 1;
 	background: url(../resources/rose_gold_dots.png);
 }
 
 #section-home {
   height: 100vh;
-  background: linear-gradient(to bottom, rgba(250,250,250,1) 75%,rgba(0,0,0,0) 100%);
-  &:after{
+  background: $primary_backround;
+  &:before{
 	  content: "";
 	  background: $home_backround;
 	  background-position: center center;
@@ -177,9 +181,20 @@ footer {
   	z-index: 1;
   }
   
+  &:after{
+		content: "";
+	  position: absolute;
+	  z-index: 1;
+    top: 0;
+  	left: 0;
+  	bottom: 0;
+  	right: 0;
+    background: linear-gradient(to bottom, rgba($white,0) 0,$primary_backround 100%);
+  }
+  
   h1 {
     text-align: center;
-    font-size: 80px;
+    font-size: 5em;
     margin: 0;
     font-family: $font_3, $font_4;
     @include gold-text();
