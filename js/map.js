@@ -16,75 +16,6 @@ export default class Map {
 
     const { map, center, zoom, markers, color } = this.options;
 
-    const styles = [
-      {
-        featureType: 'all',
-        stylers: [
-          { hue: color },
-          { saturation: -75 },
-          { lightness: 5 },
-        ],
-      },
-      {
-        featureType: 'administrative',
-        elementType: 'labels.text.fill',
-        stylers: [
-          { saturation: 20 },
-          { lightness: -70 },
-        ],
-      },
-      {
-        featureType: 'water',
-        elementType: 'geometry',
-        stylers: [
-          { saturation: -50 },
-          { lightness: 40 },
-        ],
-      },
-      {
-        featureType: 'road',
-        elementType: 'geometry',
-        stylers: [
-          { hue: color },
-          { saturation: -100 },
-          { ightness: 0 },
-        ],
-      },
-      {
-        featureType: 'road.highway',
-        elementType: 'geometry',
-        stylers: [
-          { hue: color },
-          { saturation: 5 },
-          { lightness: 5 },
-        ],
-      },
-      {
-        featureType: 'road',
-        elementType: 'geometry.stroke',
-        stylers: [
-          { saturation: 10 },
-          { lightness: 0 },
-        ],
-      }, {
-        featureType: 'road.highway',
-        elementType: 'geometry.stroke',
-        stylers: [
-          { saturation: 0 },
-          { lightness: 20 },
-        ],
-      },
-      {
-        featureType: 'transit',
-        elementType: 'geometry',
-        stylers: [
-          { hue: color },
-          { saturation: 30 },
-          { lightness: -30 },
-        ],
-      },
-    ];
-
     this.map = new google.maps.Map(map, {
       clickableIcons: false,
       scrollwheel: false,
@@ -104,7 +35,6 @@ export default class Map {
       },
       center: { lat: center[0], lng: center[1] },
       zoom,
-      styles,
     });
 
     google.maps.event.addDomListener(window, 'resize', () => {
@@ -116,14 +46,14 @@ export default class Map {
     });
 
     if (markers) {
-      const bounds = new google.maps.LatLngBounds();
+      // const bounds = new google.maps.LatLngBounds();
 
       markers.forEach((marker) => {
         const mark = this.addMarker(marker);
-        bounds.extend(mark.getPosition());
+        // bounds.extend(mark.getPosition());
       });
 
-      this.map.fitBounds(bounds);
+      // this.map.fitBounds(bounds);
     }
   }
 

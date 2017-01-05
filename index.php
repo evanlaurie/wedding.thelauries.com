@@ -4,17 +4,17 @@
 			"nav" => "Story",
 			"title" => "Our Story"
 		),
-		"photos" => array(
-			"nav" => "Photos",
-			"title" => "Photo Gallery"
+		"engagement" => array(
+			"nav" => "Engagement",
+			"title" => "Engagement Photos"
 		),
 		"wedding" => array(
 			"nav" => "Wedding",
-			"title" => "The Wedding",
+			"title" => "Wedding Photos",
 		),
-		"rsvp" => array(
-			"nav" => "RSVP",
-			"title" => "Are you attending?"
+		"contact" => array(
+			"nav" => "contact",
+			"title" => "Contact Us"
 		)
 	);
 ?>
@@ -31,7 +31,7 @@
 		<script type="text/javascript" src="dist/bundle.js"></script>
 	</head>
 	<body>
-		<div class="background"></div>
+		<div id="background"></div>
 		<header id="header">
 			<h1 class="logo"><span>Elise</span> <i class="flaticon-interlocking-rings"></i> <span>Evan</span></h1>
 			<nav class="nav" id="nav">
