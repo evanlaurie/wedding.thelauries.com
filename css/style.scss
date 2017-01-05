@@ -16,29 +16,33 @@ $event_background: #fafafa;
 $section_background: #fafafa;
 $gallery_background: #fafafa;
 
-$nav_color: #454545;
-$event_title_color: #454545;
+$nav_color: #2450a3;
+$event_title_color: #2450a3;
 
-$border_color: #454545;
+$border_color: #2450a3;
 
-$gradient_line_color: #454545;
+$gradient_line_color: #2450a3;
 
 //fonts
 $font_0: Open Sans;
 $font_1: sans-serif;
-$font_2: Julius Sans One;
-$font_3: Pinyon Script;
+$font_2: Sofia;
+$font_3: Alex Brush;
 $font_4: cursive;
 $font_5: icomoon;
 
 //urls
-$home_backround: url(../resources/olympia.jpg);
+$home_backround: url(../resources/Palauea.jpg);
 
 @mixin gold-text() {
 color: rgb(191, 153, 151);
   font-weight: normal;	
-  background: -webkit-linear-gradient(transparent, transparent),
-              -webkit-linear-gradient(top, rgb(243, 203, 197) 0%, rgb(191, 153, 151) 45%, rgb(131, 90, 86) 83%, rgb(124, 77, 74) 100%);
+ 
+
+background: #24C6DC; /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #24C6DC , #514A9D); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #24C6DC , #514A9D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+         
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -88,7 +92,7 @@ header {
 }
 footer {
   color: $white;
-  background: $footer_background;
+  background: rgba($footer_background, .8);
   text-align: center;
   box-shadow: 0 2px 4px rgba($shadow_color,.3);
   .content {
@@ -153,47 +157,36 @@ footer {
   }
 }
 #content{
-	background: url(../resources/rose_gold_dots.png);
+	background: rgba($primary_backround, .8);
+}
+
+#background{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	
+	background: $home_backround;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #section-home {
   height: 100vh;
-  background: $primary_backround;
-  &:before{
-	  content: "";
-	  background: $home_backround;
-	  background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		opacity: 0.2;
-  	top: 0;
-  	left: 0;
-  	bottom: 0;
-  	right: 0;
-  	position: absolute;
-  	z-index: 1;
-  }
-  
-  &:after{
-		content: "";
-	  position: absolute;
-	  z-index: 1;
-    top: 0;
-  	left: 0;
-  	bottom: 0;
-  	right: 0;
-    background: linear-gradient(to bottom, rgba($white,0) 0,$primary_backround 100%);
-  }
-  
+  background: rgba($primary_backround, .8);
+  background: linear-gradient(to bottom, rgba($white,0) 0,rgba($primary_backround, .8) 100%);
   h1 {
     text-align: center;
-    font-size: 5em;
+    font-size: 15vw;
     margin: 0;
     font-family: $font_3, $font_4;
     @include gold-text();
   }
   h2 {
-    font-size: 30px;
+    font-size: 3vw;
     text-align: center;
     font-family: $font_2, $font_1;
   }
@@ -252,7 +245,7 @@ footer {
 
 .facny-title {
   font-size: 14px;
-  color: $event_title_color;
+  color: $text_color;
   padding-bottom: 8px;
   padding-left: 4px;
   font-weight: bold;
@@ -462,6 +455,7 @@ footer {
     	button{
 	    	width: 10px;
 	    	&:before{
+		    	color: $border_color;
 		    	width: 10px;
 		    	font-size: 9px;
 	    	}
@@ -501,10 +495,11 @@ footer {
   right: -34px;
   left: -34px;
   font-size: 50px;
-  .next {
+  .next,
+  .previous {
+	  color: $border_color;
     position: absolute;
     top: 50%;
-    right: 0;
     transform: translate(0, -50%);
     cursor: pointer;
     i,
@@ -514,24 +509,14 @@ footer {
       width: 30px;
     }
   }
-  .previous {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%);
-    cursor: pointer;
-    i,
-    i:before{
-      margin: 0;
-      padding: 0;
-      width: 30px;
-    }
+  .next {
+  	right: 0;
   }
 }
 
 #map{
   width: calc(100% + 20px);
-  margin: 0 -10px;
+  margin: 10px -10px;
   overflow: hidden;
   position: relative;
   

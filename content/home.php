@@ -1,5 +1,4 @@
 <div class="home-title">
-	<h1>Tying the knot!</h1>  
-	<h2>October 20, 2017</h1>
-	<div id="countdown"></div>
+	<h1>Maui&#8217;d</h1>  
+	<h2>January 1, 2017</h1>
 </div>

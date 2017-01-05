@@ -26,9 +26,9 @@ $events = array(
     'content' => 'Evan and Elise welcomed their first baby girl together – their pup, Sophie!  Sophie came from a dog rescue in Sugarland, Texas, and has been an integral part of the family ever since.  Sophie is an only child… For now.'
   ),
   array(
-    'date' => 'October 20, 2017',
-    'title' => 'Our Wedding',
-    'content' => 'Exactly four years after their first date, Evan and Elise welcome you to join them in celebration as they become husband and wife.'
+    'date' => 'January 1, 2017',
+    'title' => 'Maui&#8217;d',
+    'content' => ''
   ),
 );
 
