@@ -4,18 +4,11 @@
 			"nav" => "Story",
 			"title" => "Our Story"
 		),
-		"engagement" => array(
-			"nav" => "Engagement",
-			"title" => "Engagement Photos"
+		"photos" => array(
+			"nav" => "Photos",
 		),
-		"wedding" => array(
-			"nav" => "Wedding",
-			"title" => "Wedding Photos",
-		),
-		"contact" => array(
-			"nav" => "contact",
-			"title" => "Contact Us"
-		)
+		
+
 	);
 ?>
 
@@ -39,7 +32,7 @@
 				<?php foreach($sections as $id => $section): ?>
 					<?php if($section["nav"]): ?>
 						<a id="nav-<?php print $id; ?>" href="#<?php print $id; ?>"><?php print $section["nav"]; ?></a>
-						<?php if($i == 1): ?> <span class="spacer"></span><?php endif; ?>
+						<?php if($i == 0): ?> <span class="spacer"></span><?php endif; ?>
 						<?php $i++; ?>
 					<?php endif; ?>
 				<?php endforeach; ?>
