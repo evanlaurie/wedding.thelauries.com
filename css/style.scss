@@ -16,7 +16,7 @@ $header_background: rgba($secondary_background,.9);
 $event_background: $secondary_background;
 $gallery_background: $secondary_background;
 
-$nav_color: #F08080;
+$nav_color: #2450a3;
 $event_title_color: #2450a3;
 
 $border_color: #2450a3;
@@ -38,7 +38,7 @@ $home_backround: url(../resources/Palauea.jpg);
 @mixin dark-text() {
   color: #24C6DC;
   font-weight: normal;
-  background: -webkit-linear-gradient(bottom, #e96443 , #904e95); /* Chrome 10-25, Safari 5.1-6 */     
+  background: -webkit-linear-gradient(top, #2450a3 , #FF5F6D); /* Chrome 10-25, Safari 5.1-6 */     
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

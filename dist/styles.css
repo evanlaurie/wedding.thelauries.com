@@ -496,7 +496,7 @@ header {
     cursor: pointer;
     color: #24C6DC;
     font-weight: normal;
-    background: -webkit-linear-gradient(bottom, #e96443, #904e95);
+    background: -webkit-linear-gradient(top, #2450a3, #FF5F6D);
     /* Chrome 10-25, Safari 5.1-6 */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
@@ -510,7 +510,7 @@ header {
       line-height: 1;
       color: #24C6DC;
       font-weight: normal;
-      background: -webkit-linear-gradient(bottom, #e96443, #904e95);
+      background: -webkit-linear-gradient(top, #2450a3, #FF5F6D);
       /* Chrome 10-25, Safari 5.1-6 */
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; }
@@ -557,7 +557,7 @@ footer {
         flex: 1;
     padding: 4px 0;
     margin: 0;
-    color: #F08080;
+    color: #2450a3;
     font-size: 16px;
     text-align: center;
     text-decoration: none;
@@ -565,9 +565,9 @@ footer {
     border-bottom: 4px solid;
     border-color: transparent; }
     #nav a:hover {
-      border-bottom-color: rgba(240, 128, 128, 0.5); }
+      border-bottom-color: rgba(36, 80, 163, 0.5); }
     #nav a.active {
-      border-bottom-color: #F08080; }
+      border-bottom-color: #2450a3; }
 
 #content {
   background: rgba(245, 245, 245, 0.8); }
