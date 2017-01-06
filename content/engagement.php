@@ -11,17 +11,13 @@
 		</div>
 		<div class="gallery-content">
 		<?php
-			foreach (glob("resources/wedding/*.jpg") as $filename) {
+			foreach (glob("resources/engagement/*.jpg") as $filename) {
 				echo '<div class="gallery-item"><img src="' . $filename .'"/></div>';
 			}
 		?>
 		</div>
 		<div class="gallery-credit">
-  		<span>Photos by Kyle Evanko | <a target="_BLANK" href="http://www.leluxehawaii.com">www.leluxehawaii.com</a></span>
+  		<span>Photos by Christine Nguyen | <a target="_BLANK" href="http://olyphotography.com">www.olyphotography.com</a></span>
 		</div>
 	</div>
-</div>
-<div id="map">
-  <div id="map-canvas"></div>
-  <div id="map-panel"></div>
 </div>

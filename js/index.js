@@ -10,16 +10,18 @@ import Map from './map';
 
 WebFont.load({
   google: {
-    families: ['Italianno', 'Open Sans Condensed:300', 'Open Sans', 'Julius Sans One'],
+    families: ['Alex Brush', 'Open Sans Condensed:300', 'Open Sans', 'Sofia'],
   },
 });
 
 $(document).ready(() => {
+  const sections = [];
+
+  $('.section').map(function () { sections.push(this.id); });
+
   $('.section').waypoint({
     handler(direction) {
-      const id = ((direction === 'up') ?
-        this.element.previousElementSibling.id :
-        this.element.id).split('-')[1];
+      const id = ((direction === 'up') ? sections[sections.indexOf(this.element.id) - 1] : this.element.id).split('-')[1];
 
       $('#nav a').removeClass('active');
       $(`#nav-${id}`).addClass('active');
@@ -60,26 +62,22 @@ $(document).ready(() => {
     arrows: false,
   });
 
-  $('.gallery-nav .next').click(() => {
-	  $('.gallery-content').slick('slickNext');
+  $('.gallery-nav .next').click(function () {
+	  $(this).parents('.gallery-nav').siblings('.gallery-content').slick('slickNext');
   });
 
-  $('.gallery-nav .previous').click(() => {
-	  $('.gallery-content').slick('slickPrev');
+  $('.gallery-nav .previous').click(function () {
+	  $(this).parents('.gallery-nav').siblings('.gallery-content').slick('slickPrev');
   });
 
-  const wedding = { lat: 47.035527, long: -122.904786, icon: 'flaticon-newly-married-couple' };
-  const reception = { lat: 47.042704, long: -122.903550, icon: 'flaticon-champagne-glasses' };
+  const wedding = { lat: 20.669548, long: -156.442907, icon: 'flaticon-newly-married-couple' };
 
   const map = new Map({
     map: document.getElementById('map-canvas'),
     panel: document.getElementById('map-panel'),
     color: '#454545',
-    center: [47.035524, -122.894],
-    zoom: 15,
-    markers: [wedding, reception],
+    center: [20.669548, -156.442907],
+    zoom: 11,
+    markers: [wedding],
   });
-
-  $('#directions-wedding').on('click', () => { map.directions(wedding); });
-  $('#directions-reception').on('click', () => { map.directions(reception); });
 });

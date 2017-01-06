@@ -1,22 +1,14 @@
 <?php
 	$sections = array(
-		"home" => array(),
 		"story" => array(
 			"nav" => "Story",
 			"title" => "Our Story"
 		),
 		"photos" => array(
 			"nav" => "Photos",
-			"title" => "Photo Gallery"
 		),
-		"wedding" => array(
-			"nav" => "Wedding",
-			"title" => "The Wedding",
-		),
-		"rsvp" => array(
-			"nav" => "RSVP",
-			"title" => "Are you attending?"
-		)
+		
+
 	);
 ?>
 
@@ -32,7 +24,7 @@
 		<script type="text/javascript" src="dist/bundle.js"></script>
 	</head>
 	<body>
-		<div class="background"></div>
+		<div id="background"></div>
 		<header id="header">
 			<h1 class="logo"><span>Elise</span> <i class="flaticon-interlocking-rings"></i> <span>Evan</span></h1>
 			<nav class="nav" id="nav">
@@ -40,12 +32,17 @@
 				<?php foreach($sections as $id => $section): ?>
 					<?php if($section["nav"]): ?>
 						<a id="nav-<?php print $id; ?>" href="#<?php print $id; ?>"><?php print $section["nav"]; ?></a>
-						<?php if($i == 1): ?> <span class="spacer"></span><?php endif; ?>
+						<?php if($i == 0): ?> <span class="spacer"></span><?php endif; ?>
 						<?php $i++; ?>
 					<?php endif; ?>
 				<?php endforeach; ?>
 			</nav>
 		</header>
+		<section class="section" id="section-home">
+			<article class="section-content">
+				<?php require("content/home.php"); ?>
+			</article>
+		</section>
 		<div class="content" id="content">
 		
 		<?php foreach($sections as $id => $section): ?>
