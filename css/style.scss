@@ -14,9 +14,9 @@ $logo_color: #454545;
 
 $header_background: rgba($secondary_background,.9);
 $event_background: $secondary_background;
-$gallery_background: rgba($secondary_background, .85);
+$gallery_background: $secondary_background;
 
-$nav_color: #2450a3;
+$nav_color: #F08080;
 $event_title_color: #2450a3;
 
 $border_color: #2450a3;
@@ -35,10 +35,18 @@ $font_6: Satisfy;
 //urls
 $home_backround: url(../resources/Palauea.jpg);
 
-@mixin gold-text() {
+@mixin dark-text() {
   color: #24C6DC;
   font-weight: normal;
-  background: -webkit-linear-gradient(bottom, #24C6DC , #514A9D); /* Chrome 10-25, Safari 5.1-6 */     
+  background: -webkit-linear-gradient(bottom, #e96443 , #904e95); /* Chrome 10-25, Safari 5.1-6 */     
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin light-text() {
+  color: #24C6DC;
+  font-weight: normal;
+  background: -webkit-linear-gradient(bottom, #FF5F6D , #FFC371); /* Chrome 10-25, Safari 5.1-6 */     
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -73,7 +81,7 @@ header {
     line-height: 38px;
     font-family: $font_2, $font_1;
     cursor: pointer;
-    @include gold-text();
+    @include dark-text();
     i {
       font-size: 30px;
       font-family: $font_5;
@@ -82,7 +90,7 @@ header {
       font-variant: normal;
       text-transform: none;
       line-height: 1;
-      @include gold-text();
+      @include dark-text();
     }
   }
 }
@@ -179,14 +187,26 @@ footer {
     margin: 0;
     font-family: $font_3, $font_4;
     line-height: 1em;
-    
-    @include gold-text();
+    position: relative;
+    @include light-text();
+    &:after {
+      content: attr(data-text);
+      position: absolute;
+      text-shadow: 2px 2px 4px rgba(#454545, .8);
+      z-index: -1;
+      top: -50%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
   }
   h2 {
     font-size: 2em;
     text-align: center;
     font-family: $font_0, $font_1;
     margin: 0;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(#454545, .8);
+    
   }
   #countdown{
     font-size: 24px;
@@ -206,7 +226,6 @@ footer {
     z-index: 10;
     transform: translate(-50%,-50%);
     padding: 10px;
-    margin-top: 38px;
   }
   .transition {
     position: absolute;
@@ -238,7 +257,7 @@ footer {
     text-align: center;
     margin: 0;
     white-space: nowrap;
-    @include gold-text();
+    @include light-text();
   }
 }
 
@@ -708,7 +727,7 @@ footer {
 }
 
 .guestbook-title{
-  background: darken($gallery_background, 2%);
+  background: darken($event_background, 2%);
   padding: 4px;
 }
 
@@ -724,7 +743,6 @@ footer {
 }
 
 .guestbok-message{
-  background: $gallery_background;
   padding: 6px;
 }
 
@@ -803,7 +821,6 @@ footer {
 	}
 	
 	.home-title {
-    margin-top: 76px;
   }
 	
   .timeline::before {
