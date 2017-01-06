@@ -4,11 +4,17 @@
 			"nav" => "Story",
 			"title" => "Our Story"
 		),
+		"wedding" => array(
+			"nav" => "Wedding",
+			"title" => "Palauea Beach"
+		),
 		"photos" => array(
 			"nav" => "Photos",
 		),
-		
-
+		"guestbook" => array(
+			"nav" => "Guest Book",
+			"title" => "Guest Book"
+		),
 	);
 ?>
 
@@ -32,7 +38,7 @@
 				<?php foreach($sections as $id => $section): ?>
 					<?php if($section["nav"]): ?>
 						<a id="nav-<?php print $id; ?>" href="#<?php print $id; ?>"><?php print $section["nav"]; ?></a>
-						<?php if($i == 0): ?> <span class="spacer"></span><?php endif; ?>
+						<?php if($i == 1): ?> <span class="spacer"></span><?php endif; ?>
 						<?php $i++; ?>
 					<?php endif; ?>
 				<?php endforeach; ?>
@@ -63,8 +69,8 @@
 			<div class="content">
 				<h2>Thanks for Visiting our Website</h2>
 				<div class="footer-text">				
-					<h3>Mr. &amp; Future Mrs. Laurie</h3>
-					<div class="copyrights">Copyright &copy; 2016 <a href="mailto:evan@thelauries.com">Evan</a> &amp; <a href="mailto:elise@thelauries.com">Elise Laurie</a></div>
+					<h3>Mr. &amp; Mrs. Laurie</h3>
+					<div class="copyrights">Copyright &copy; 2017 <a href="mailto:evan@thelauries.com">Evan</a> &amp; <a href="mailto:elise@thelauries.com">Elise Laurie</a></div>
 					<div>Developed by <a target="_blank" href="http://evanlaurie.com">Evan Laurie</a></div>
 				</div>
       </div>

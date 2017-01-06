@@ -10,7 +10,7 @@ import Map from './map';
 
 WebFont.load({
   google: {
-    families: ['Alex Brush', 'Open Sans Condensed:300', 'Open Sans', 'Sofia'],
+    families: ['Alex Brush', 'Open Sans Condensed:300', 'Open Sans', 'Sofia', 'Satisfy'],
   },
 });
 
