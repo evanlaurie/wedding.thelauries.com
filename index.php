@@ -44,7 +44,7 @@
 				<?php $i = 0; ?>
 				<?php foreach($sections as $id => $section): ?>
 					<?php if($section["nav"]): ?>
-						<a id="nav-<?php print $id; ?>" href="#<?php print $id; ?>"><?php print $section["nav"]; ?></a>
+						<a id="nav-<?=$id ?>" href="#<?=$id ?>"><?=$section["nav"] ?></a>
 						<?php if($i == 1): ?> <span class="spacer"></span><?php endif; ?>
 						<?php $i++; ?>
 					<?php endif; ?>
@@ -53,36 +53,29 @@
 		</header>
 		<section class="section" id="section-home">
 			<article class="section-content">
-				<?php require("content/home.php"); ?>
+				<?php require_once("content/home.php"); ?>
 			</article>
 		</section>
 		<div class="content" id="content">
 		
 		<?php foreach($sections as $id => $section): ?>
-			<section class="section" id="section-<?php print $id;?>">
+			<section class="section" id="section-<?=$id ?>">
 				<?php if($section["title"]): ?>
 				<div class="section-header">
 					<h3 class="section-title">
-  					<?php print $section["title"]; ?>
+  					<?=$section["title"] ?>
   				</h3>
 				</div>
 				<?php endif; ?>
 				<article class="section-content">
-					<?php require("content/".$id.".php"); ?>
+					<?php require_once("content/".$id.".php"); ?>
 				</article>
 			</section>
 		<?php endforeach; ?>
 
 		</div>
 		<footer>
-			<div class="content">
-				<h2>Thanks for Visiting our Website</h2>
-				<div class="footer-text">				
-					<h3>Mr. &amp; Mrs. Laurie</h3>
-					<div class="copyrights">Copyright &copy; 2017 <a href="mailto:evan@thelauries.com">Evan</a> &amp; <a href="mailto:elise@thelauries.com">Elise Laurie</a></div>
-					<div>Developed by <a target="_blank" href="http://evanlaurie.com">Evan Laurie</a></div>
-				</div>
-      </div>
+			<?php require_once("content/footer.php"); ?>
 		</footer>
 	</body>
 </html>

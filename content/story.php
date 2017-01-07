@@ -31,9 +31,7 @@ $events = array(
     'content' => ' After over a year long engagement, Evan and Elise chose to get married on the beautiful island of Maui. The ceremony took place on Palauea Beach located near Wailea in the southern part of the island.'
   ),
 );
-
 ?>
-
 <div class="timeline">
   <?php foreach($events as $event): ?>
     <div class="event">
@@ -41,7 +39,7 @@ $events = array(
 	  		<div class="arrow"></div>
 	  		<div class="event-title facny-title"><?=$event['title'] ?></div>
 	  		<div class="event-body"><?=$event['content'] ?></div>
-	  		<span class="event-date"><?=($event['date']) ?></span>
+	  		<span class="event-date"><?=$event['date'] ?></span>
 	  	</div>
 	  </div>
   <?php endforeach ?>
