@@ -1,5 +1,4 @@
 <?php
-  session_start();
   $post_id = uniqid();
   
   $_SESSION['guestbook'] = array(
