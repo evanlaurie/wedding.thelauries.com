@@ -28,7 +28,7 @@
 		<meta name="keywords" content="elise and evan,elise and evan laurie,laurie wedding,elise and evan wedding website,mauie'd,wedding website,wedding websites,our wedding website,personal wedding website">
 		<meta property="og:description" content="">
 		<meta property="og:site_name" content="Elise & Evan | Maui'd">
-		<meta property="og:url" content="http://wedding.thelauries.com">
+		<!-- <meta property="og:url" content="http://wedding.thelauries.com"> -->
 		<meta property="og:image" content="http://wedding.thelauries.com/resources/thumbnail.png">
 		
 		<link rel="shortcut icon" href="resources/favico/wedding-couple.ico">
