@@ -15,7 +15,7 @@
 		<div class="gallery-content">
 		<?php
 			foreach (glob("resources/engagement/*.jpg") as $filename) {
-				echo '<div class="gallery-item"><img src="' . $filename .'"/></div>';
+				echo '<div class="gallery-item"><img data-lazy="' . $filename .'"/></div>';
 			}
 		?>
 		</div>
@@ -41,7 +41,7 @@
 		<div class="gallery-content">
 		<?php
 			foreach (glob("resources/wedding/*.jpg") as $filename) {
-				echo '<div class="gallery-item"><img src="' . $filename .'"/></div>';
+				echo '<div class="gallery-item"><img data-lazy="' . $filename .'"/></div>';
 			}
 		?>
 		</div>

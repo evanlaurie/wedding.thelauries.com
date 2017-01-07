@@ -477,6 +477,9 @@ body {
   color: #454545;
   font-smoothing: antialiased; }
 
+body.no-scroll {
+  overflow: hidden; }
+
 header {
   position: fixed;
   top: 0;
@@ -803,6 +806,31 @@ footer {
 .gallery-sizer {
   margin-top: 70%; }
 
+.gallery.full .gallery-content {
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: 9999;
+  background: #000;
+  border-radius: 0;
+  padding: 10px; }
+
+.gallery.full .gallery-credit {
+  position: fixed;
+  left: 0;
+  z-index: 99999;
+  border-radius: 0; }
+
+.gallery.full .slick-dots {
+  background: #000;
+  border: none;
+  bottom: -18px;
+  border-radius: 0; }
+  .gallery.full .slick-dots li button:before {
+    color: #fff; }
+
 .gallery-content {
   position: absolute;
   top: 0;
@@ -834,7 +862,7 @@ footer {
   .gallery-content .slick-dots {
     bottom: -28px;
     margin: 0;
-    height: auto;
+    height: 28px;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     background: whitesmoke; }
@@ -1068,8 +1096,7 @@ footer {
   appearance: none;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  -ms-box-shadow: 2px 2px 5px -2px rgba(69, 69, 69, 0.3);
-  box-shadow: 2px 2px 5px -2px rgba(69, 69, 69, 0.3); }
+  box-shadow: 0 0 4px rgba(69, 69, 69, 0.3) inset; }
 
 #guestbok-form textarea {
   resize: vertical;
