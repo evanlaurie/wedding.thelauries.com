@@ -23,7 +23,14 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
-		<title>Evan & Elise Wedding</title>
+		<title>Elise & Evan | Maui'd</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="elise and evan,elise and evan laurie,laurie wedding,elise and evan wedding website,mauie'd,wedding website,wedding websites,our wedding website,personal wedding website">
+		<meta property="og:description" content="">
+		<meta property="og:site_name" content="Elise & Evan | Maui'd">
+		<meta property="og:url" content="http://wedding.thelauries.com">
+		<meta property="og:image" content="http://wedding.thelauries.com/resources/thumbnail.png">
+		
 		<link rel="shortcut icon" href="resources/favico/wedding-couple.ico">
 		<link href="dist/styles.css" rel="stylesheet" type='text/css'>
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCvX2skfLHKeRsLP7WubV7vdrMT7SlUkrk"></script>
@@ -55,7 +62,9 @@
 			<section class="section" id="section-<?php print $id;?>">
 				<?php if($section["title"]): ?>
 				<div class="section-header">
-					<h3 class="section-title"><?php print $section["title"]; ?></h3>
+					<h3 class="section-title">
+  					<?php print $section["title"]; ?>
+  				</h3>
 				</div>
 				<?php endif; ?>
 				<article class="section-content">
