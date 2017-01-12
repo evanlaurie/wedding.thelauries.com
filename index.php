@@ -65,9 +65,11 @@
 			<section class="section" id="section-<?=$id ?>">
 				<?php if($section["title"]): ?>
 				<div class="section-header">
+  				<span class="section-header-left"></span>
 					<h3 class="section-title">
   					<?=$section["title"] ?>
   				</h3>
+  				<span class="section-header-right"></span>
 				</div>
 				<?php endif; ?>
 				<article class="section-content">
