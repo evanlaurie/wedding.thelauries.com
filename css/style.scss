@@ -252,29 +252,30 @@ footer {
     background: rgba($secondary_background,.7);
     padding: 4px;
     border-radius: 8px;
-    width: 380px;
+    width: 355px;
+    max-width: 100%;
     position: relative;
     &:before,
     &:after{
       position: absolute;
       display: block;
       content: "";
-      height: 40px;
-      width: 40px;
+      height: 100%;
+      width: 24px;
       background-size: contain;
       background-position: center center;
       background-repeat: no-repeat;
       background-image: url(../resources/pineapple.png);
-      top: 10px;
+      top: 0;
     }
     
     &:before{
-      left: 0;
+      left: 6px;
       transform: rotate(-20deg);
       //background-image: url(../resources/pineapple-left.png);
     }
     &:after{
-      right: 0;
+      right: 6px;
       transform: rotate(20deg);
       //background-image: url(../resources/pineapple-right.png);
     }
