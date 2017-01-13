@@ -1,3 +1,4 @@
+/* global document */
 import $ from 'jquery';
 import 'jquery.waypoints';
 import 'jquery.easing';
@@ -17,7 +18,7 @@ WebFont.load({
 $(document).ready(() => {
   const sections = [];
 
-  $('.section').map(function () { sections.push(this.id); });
+  $('.section').each(function () { sections.push(this.id); });
 
   $('.section').waypoint({
     handler(direction) {
@@ -58,7 +59,7 @@ $(document).ready(() => {
   });
 
   $('.gallery-content').slick({
-	  dots: true,
+    dots: true,
     arrows: false,
     lazyLoad: 'ondemand',
   });
@@ -72,13 +73,13 @@ $(document).ready(() => {
   });
 
   $('.gallery-nav .next').click(function (event) {
-	  event.stopPropagation();
-	  $(this).parents('.gallery-nav').siblings('.gallery-content').slick('slickNext');
+    event.stopPropagation();
+    $(this).parents('.gallery-nav').siblings('.gallery-content').slick('slickNext');
   });
 
   $('.gallery-nav .previous').click(function (event) {
-	  event.stopPropagation();
-	  $(this).parents('.gallery-nav').siblings('.gallery-content').slick('slickPrev');
+    event.stopPropagation();
+    $(this).parents('.gallery-nav').siblings('.gallery-content').slick('slickPrev');
   });
 
 
