@@ -54,9 +54,11 @@ $home_backround: url(../resources/Palauea.jpg);
 html {
   text-size-adjust: 100%;
 }
+
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: $font_0, $font_1;
   background: $primary_backround;
@@ -99,6 +101,7 @@ header {
     }
   }
 }
+
 footer {
   color: $white;
   background: rgba($footer_background, .9);
@@ -130,6 +133,7 @@ footer {
     padding-top: 20px;
   }
 }
+
 #wrapper {
   position: relative;
   left: 0;
@@ -138,6 +142,7 @@ footer {
   z-index: 99;
   background-color: $primary_backround;
 }
+
 #nav {
   margin-top: -38px;
   display: flex;
@@ -156,14 +161,12 @@ footer {
     border-top: 4px solid;
     border-bottom: 4px solid;
     border-color: transparent;
-    &:hover {
-      border-bottom-color: rgba($nav_color,.5);
-    }
     &.active {
       border-bottom-color: $nav_color;
     }
   }
 }
+
 #content{
 	background: rgba($primary_backround, .8);
 }
@@ -174,8 +177,7 @@ footer {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	z-index: -1;
-	
+	z-index: -1;	
 	background: $home_backround;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -240,6 +242,7 @@ footer {
     background: linear-gradient(to bottom, rgba($white,0) 0,$primary_backround 100%);
   }
 }
+
 .section {
   position: relative;
     
@@ -416,6 +419,7 @@ footer {
     box-shadow: 0 0 6px 0 rgba($shadow_color,.4);
   }
 }
+
 .timeline::before {
   position: absolute;
   top: -10px;
@@ -428,6 +432,7 @@ footer {
   background: linear-gradient(to bottom, rgba($white,0) 0,$gradient_line_color 10%,$gradient_line_color 90%,rgba($white,0) 100%);
   opacity: .5;
 }
+
 .gallery {
   position: relative;
   width: 100%;
@@ -443,9 +448,11 @@ footer {
   position: relative;
   margin: auto;
 }
+
 .gallery-wrapper {
   margin: 10px 30px;
 }
+
 .gallery-sizer {
   margin-top: 70%;
 }
@@ -484,6 +491,15 @@ footer {
 		  }
 		}
   }   
+}
+
+.slick-dots li button:hover:before, 
+.slick-dots li button:focus:before {
+  opacity: .25;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: .75;
 }
 
 .gallery-content{
@@ -578,8 +594,7 @@ footer {
   a:visited,
   a:link{
     color: #bbb;
-  }
-  
+  } 
 }
 
 .gallery-nav {
@@ -748,7 +763,6 @@ footer {
       text-align: right;
     }
   }
-  
 }
 
 .marker {
@@ -789,10 +803,12 @@ footer {
     border-color: $border_color transparent transparent;
   }
 }
+
 #section-guestbook{
   margin: auto;
   max-width: 820px;
 }
+
 .guestbook-item{
   position: relative;
   width: 100%;
@@ -862,14 +878,6 @@ footer {
 	transition: all 1s ease;
 }
 
-#guestbok-form input:hover,
-#guestbok-form input:focus,
-#guestbok-form textarea:hover,
-#guestbok-form textarea:focus{
-	background: #fff;
-	outline: none;
-}
-
 #guestbok-form-submit{
 	color: #454545;
 	background: #fff;
@@ -878,10 +886,41 @@ footer {
 	float: right;
 }
 
+#guestbok-form {
+  input:focus,
+  textarea:focus{
+    background: #fff;
+    outline: none;
+  }
+}
+
 #guestbok-form-submit:focus{
 	border-color: #cccccc !important;
 	border-width: 1px !important;
 	padding: 5px !important;
+}
+
+.no-touch {
+  .slick-dots li button:hover:before {
+    opacity: 1;
+  }
+  
+  #nav a {
+    &:hover{
+      border-bottom-color: rgba($nav_color,.5);
+    }
+    &.active {
+      border-bottom-color: $nav_color;
+    }
+  }
+  
+  #guestbok-form {
+    input:hover,
+    textarea:hover{
+      background: #fff;
+      outline: none;
+    }
+  }
 }
 
 @media(max-width: 520px) {
@@ -935,6 +974,7 @@ footer {
       }
     }
   }
+  
   #nav {
     margin-top: 0;
     .spacer {
@@ -965,11 +1005,5 @@ footer {
       width: 100% !important;
       position: initial;
     }
-  }
-}
-
-@media (hover:none), (hover:on-demand) {
-	#nav a:hover {
-    border-bottom-color: initial;
   }
 }

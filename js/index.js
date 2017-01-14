@@ -3,7 +3,6 @@ import $ from 'jquery';
 import 'jquery.waypoints';
 import 'jquery.easing';
 import 'jquery.sticky';
-import 'jquery.countdown';
 import 'jquery.slick';
 
 import WebFont from 'webfontloader';
@@ -16,6 +15,10 @@ WebFont.load({
 });
 
 $(document).ready(() => {
+  if (!('ontouchstart' in document.documentElement)) {
+    $(document.documentElement).addClass('no-touch');
+  }
+
   const sections = [];
 
   $('.section').each(function () { sections.push(this.id); });
@@ -52,12 +55,6 @@ $(document).ready(() => {
     event.preventDefault();
   });
 
-  $('#countdown').countdown('2017/10/20', function (event) {
-    $(this).html(event.strftime(
-      '<span class="countdown-time"> %-D DAYS</span>'
-    ));
-  });
-
   $('.gallery-content').slick({
     dots: true,
     arrows: false,
@@ -81,7 +78,6 @@ $(document).ready(() => {
     event.stopPropagation();
     $(this).parents('.gallery-nav').siblings('.gallery-content').slick('slickPrev');
   });
-
 
   $('.gallery').click(function () {
     $('body').toggleClass('no-scroll');
