@@ -1,5 +1,5 @@
 <?php
-  if($_POST['submit']){
+  if($_POST['submit'] && $_POST['name'] && $_POST['message']){
     session_start();
     $session_post = $_SESSION['guestbook'];
     
