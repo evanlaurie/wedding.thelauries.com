@@ -27,11 +27,11 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<title>Elise & Evan | Maui'd</title>
-		<meta name="description" content="">
+		<meta name="description" content="Elise and Evan got Maui'd!">
 		<meta name="keywords" content="elise and evan,elise and evan laurie,laurie wedding,elise and evan wedding website,mauie'd,wedding website,wedding websites,our wedding website,personal wedding website">
-		<meta property="og:description" content="">
+		<meta property="og:description" content="Elise and Evan got Maui'd!">
 		<meta property="og:site_name" content="Elise & Evan | Maui'd">
-		<!-- <meta property="og:url" content="http://wedding.thelauries.com"> -->
+		<meta property="og:url" content="http://wedding.thelauries.com">
 		<meta property="og:image" content="http://wedding.thelauries.com/resources/thumbnail.png">
 		
 		<link rel="shortcut icon" href="resources/favico/wedding-couple.ico">
