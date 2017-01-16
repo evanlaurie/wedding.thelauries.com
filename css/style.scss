@@ -195,6 +195,8 @@ footer {
     font-family: $font_3, $font_4;
     line-height: 1em;
     position: relative;
+    margin-top: -1px;
+    margin-bottom: -10px;
     @include light-text();
     &:after {
       content: attr(data-text);
@@ -232,6 +234,7 @@ footer {
     z-index: 10;
     transform: translate(-50%,-50%);
     padding: 10px;
+    overflow: hidden;
   }
   .transition {
     position: absolute;
