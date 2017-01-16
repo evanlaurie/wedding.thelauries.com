@@ -36,7 +36,7 @@ $font_6: Satisfy;
 $home_backround: url(../resources/Palauea.jpg);
 
 @mixin dark-text() {
-  color: #24C6DC;
+  color: #FF5F6D;
   font-weight: normal;
   background: -webkit-linear-gradient(top, #2450a3 , #FF5F6D); /* Chrome 10-25, Safari 5.1-6 */     
   -webkit-background-clip: text;
@@ -44,7 +44,7 @@ $home_backround: url(../resources/Palauea.jpg);
 }
 
 @mixin light-text() {
-  color: #24C6DC;
+  color: #FFC371;
   font-weight: normal;
   background: -webkit-linear-gradient(bottom, #FF5F6D , #FFC371); /* Chrome 10-25, Safari 5.1-6 */     
   -webkit-background-clip: text;
