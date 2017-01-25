@@ -28,7 +28,7 @@ $events = array(
   array(
     'date' => 'January 1, 2017',
     'title' => 'Maui&#8217;d',
-    'content' => ' After over a year long engagement, Evan and Elise chose to get married on the beautiful island of Maui. The ceremony took place on Palauea Beach located near Wailea in the southern part of the island.'
+    'content' => 'Evan and Elise were married in a private ceremony on Palauea Beach in Maui, Hawaii.  Mahalo to our family and friends for supporting us as we begin our lives together!'
   ),
 );
 ?>
