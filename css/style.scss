@@ -628,7 +628,7 @@ footer {
 
 #map{
   width: calc(100% + 20px);
-  margin: 10px -10px;
+  margin: 0 -10px;
   overflow: hidden;
   position: relative;
   
@@ -821,6 +821,10 @@ footer {
   margin: 10px 0;
   box-shadow: 0 0 10px 0 rgba($shadow_color,.4);
   overflow: hidden;
+  
+  &:first-of-type{
+    margin-top: 0;
+  }
 }
 
 .guestbook-title{
