@@ -27,7 +27,7 @@ $events = array(
   ),
   array(
     'date' => 'January 1, 2017',
-    'title' => 'Maui&#8217;d',
+    'title' => 'Just Maui&#8217;d',
     'content' => 'Evan and Elise were married in a private ceremony on Palauea Beach in Maui, Hawaii. Mahalo to our family and friends for your love and support as we begin our lives together!'
   ),
 );
