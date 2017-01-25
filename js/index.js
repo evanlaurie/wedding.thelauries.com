@@ -1,8 +1,8 @@
+/* global document */
 import $ from 'jquery';
 import 'jquery.waypoints';
 import 'jquery.easing';
 import 'jquery.sticky';
-import 'jquery.countdown';
 import 'jquery.slick';
 
 import WebFont from 'webfontloader';
@@ -10,14 +10,18 @@ import Map from './map';
 
 WebFont.load({
   google: {
-    families: ['Alex Brush', 'Open Sans Condensed:300', 'Open Sans', 'Sofia'],
+    families: ['Alex Brush', 'Open Sans Condensed:300', 'Open Sans', 'Sofia', 'Satisfy'],
   },
 });
 
 $(document).ready(() => {
+  if (!('ontouchstart' in document.documentElement)) {
+    $(document.documentElement).addClass('no-touch');
+  }
+
   const sections = [];
 
-  $('.section').map(function () { sections.push(this.id); });
+  $('.section').each(function () { sections.push(this.id); });
 
   $('.section').waypoint({
     handler(direction) {
@@ -51,23 +55,40 @@ $(document).ready(() => {
     event.preventDefault();
   });
 
-  $('#countdown').countdown('2017/10/20', function (event) {
-    $(this).html(event.strftime(
-      '<span class="countdown-time"> %-D DAYS</span>'
-    ));
-  });
-
   $('.gallery-content').slick({
-	  dots: true,
+    dots: true,
     arrows: false,
+    lazyLoad: 'ondemand',
   });
 
-  $('.gallery-nav .next').click(function () {
-	  $(this).parents('.gallery-nav').siblings('.gallery-content').slick('slickNext');
+  $('.gallery-content').on('swipe', (event) => {
+    event.stopPropagation();
   });
 
-  $('.gallery-nav .previous').click(function () {
-	  $(this).parents('.gallery-nav').siblings('.gallery-content').slick('slickPrev');
+  $('.slick-dots').on('click', (event) => {
+    event.stopPropagation();
+  });
+
+  $('.gallery-nav .next').click(function (event) {
+    event.stopPropagation();
+    $(this).parents('.gallery-nav').siblings('.gallery-content').slick('slickNext');
+  });
+
+  $('.gallery-nav .previous').click(function (event) {
+    event.stopPropagation();
+    $(this).parents('.gallery-nav').siblings('.gallery-content').slick('slickPrev');
+  });
+
+  $('.gallery').click(function () {
+    $('body').toggleClass('no-scroll');
+    $(this).toggleClass('full');
+    $(this).children('.gallery-content').slick('setPosition');
+
+    if ($(this).hasClass('full')) {
+      $('body').bind('touchmove', (event) => { event.preventDefault(); });
+    } else {
+      $('body').unbind('touchmove');
+    }
   });
 
   const wedding = { lat: 20.669548, long: -156.442907, icon: 'flaticon-newly-married-couple' };

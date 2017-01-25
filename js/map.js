@@ -1,7 +1,9 @@
+/* global window, navigator, google */
 import $ from 'jquery';
 import { merge } from 'lodash';
-import RichMarker from '../lib/rich-marker/src/richmarker.js';
 import elementResizeEvent from 'element-resize-event';
+
+import RichMarker from '../lib/rich-marker/src/richmarker';
 
 export default class Map {
   constructor(options = {}) {
@@ -14,7 +16,7 @@ export default class Map {
     this.options = merge(defaults, options);
     this.markers = [];
 
-    const { map, center, zoom, markers, color } = this.options;
+    const { map, center, zoom, markers } = this.options;
 
     this.map = new google.maps.Map(map, {
       clickableIcons: false,
@@ -46,14 +48,9 @@ export default class Map {
     });
 
     if (markers) {
-      // const bounds = new google.maps.LatLngBounds();
-
       markers.forEach((marker) => {
-        const mark = this.addMarker(marker);
-        // bounds.extend(mark.getPosition());
+        this.addMarker(marker);
       });
-
-      // this.map.fitBounds(bounds);
     }
   }
 
@@ -86,7 +83,7 @@ export default class Map {
 
   directions(from, to) {
     if (from && !to) {
-      if (!navigator.geolocation) return false;
+      if (!navigator.geolocation) return;
 
       navigator.geolocation.getCurrentPosition((position) => {
         this.directions({ lat: position.coords.latitude, long: position.coords.longitude, icon: 'flaticon-home' }, from);
@@ -120,11 +117,13 @@ export default class Map {
       destination: end,
       travelMode: google.maps.TravelMode.DRIVING,
     }, (response, status) => {
-      if (status == google.maps.DirectionsStatus.OK) {
+      if (status === google.maps.DirectionsStatus.OK) {
         this.directionDisplay.setDirections(response);
         this.writeDirectionsSteps(from, to, response.routes[0].legs[0]);
       }
     });
+
+    return;
   }
 
   writeDirectionsSteps(from, to, directions) {

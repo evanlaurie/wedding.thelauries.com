@@ -15,7 +15,7 @@
 		<div class="gallery-content">
 		<?php
 			foreach (glob("resources/engagement/*.jpg") as $filename) {
-				echo '<div class="gallery-item"><img src="' . $filename .'"/></div>';
+				echo '<div class="gallery-item"><img data-lazy="' . $filename .'"/></div>';
 			}
 		?>
 		</div>
@@ -41,7 +41,7 @@
 		<div class="gallery-content">
 		<?php
 			foreach (glob("resources/wedding/*.jpg") as $filename) {
-				echo '<div class="gallery-item"><img src="' . $filename .'"/></div>';
+				echo '<div class="gallery-item"><img data-lazy="' . $filename .'"/></div>';
 			}
 		?>
 		</div>
@@ -49,8 +49,4 @@
   		<span>Photos by Kyle Evanko | <a target="_BLANK" href="http://www.leluxehawaii.com">www.leluxehawaii.com</a></span>
 		</div>
 	</div>
-</div>
-<div id="map">
-  <div id="map-canvas"></div>
-  <div id="map-panel"></div>
 </div>
